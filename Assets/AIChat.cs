@@ -17,7 +17,7 @@ public class OpenRouterChat : MonoBehaviour
     public float typingSpeed = 0.02f;
 
     [Header("API")]
-    [SerializeField] private string apiKey = "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";
+    [SerializeField] private string apiKey = "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";
     private string url = "https://openrouter.ai/api/v1/chat/completions";
 
     [Header("Model")]
@@ -166,6 +166,7 @@ Si no puedes generar respuesta válida, devuelve:
                 outputText.text = "Error parsing AI response.";
             }
         }
+        Debug.Log("AUTH HEADER = Bearer " + apiKey);
     }
 
     IEnumerator TypeText(string text)
