@@ -2298,7 +2298,9 @@ MonoBehaviour:
   inputField: {fileID: 969373072}
   outputText: {fileID: 18302292}
   typingSpeed: 0.02
-  apiKey: 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
+  apiKey: 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
+  positionState: 0
+  faceState: 0
 --- !u!4 &1583432906
 Transform:
   m_ObjectHideFlags: 0
