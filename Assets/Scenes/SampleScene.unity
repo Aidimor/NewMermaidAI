@@ -651,7 +651,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4, y: 23}
+  m_AnchoredPosition: {x: -6, y: 31}
   m_SizeDelta: {x: 289, y: 371.08456}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &112888142
@@ -1571,6 +1571,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfe64f034e7e2fe4e904d7543ccbb485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _aiChat: {fileID: 1583432905}
   _mermaidAnimator: {fileID: 1241877956}
   _eyesImage:
   - {fileID: 1000953112}
@@ -1582,20 +1583,20 @@ MonoBehaviour:
   _eyesSpeed: 3
   _mouthObject: {fileID: 1824530862}
   _allMouths:
-  - {fileID: 759052866, guid: d0bb892fe11694343a3a1027cf27ef68, type: 3}
-  - {fileID: 79125390, guid: d0bb892fe11694343a3a1027cf27ef68, type: 3}
-  - {fileID: 985169288, guid: d0bb892fe11694343a3a1027cf27ef68, type: 3}
-  - {fileID: 1742355316, guid: d0bb892fe11694343a3a1027cf27ef68, type: 3}
-  - {fileID: -873818462, guid: d0bb892fe11694343a3a1027cf27ef68, type: 3}
-  - {fileID: -873818462, guid: d0bb892fe11694343a3a1027cf27ef68, type: 3}
-  - {fileID: 1886895359, guid: d0bb892fe11694343a3a1027cf27ef68, type: 3}
-  - {fileID: -1935708363, guid: d0bb892fe11694343a3a1027cf27ef68, type: 3}
-  - {fileID: 1458997172, guid: d0bb892fe11694343a3a1027cf27ef68, type: 3}
-  - {fileID: 1434915777, guid: d0bb892fe11694343a3a1027cf27ef68, type: 3}
-  - {fileID: -1920250293, guid: d0bb892fe11694343a3a1027cf27ef68, type: 3}
-  - {fileID: 1165734377, guid: d0bb892fe11694343a3a1027cf27ef68, type: 3}
-  - {fileID: -387698347, guid: d0bb892fe11694343a3a1027cf27ef68, type: 3}
-  _blinkTimer: 0
+  - {fileID: 115936231, guid: d0bb892fe11694343a3a1027cf27ef68, type: 3}
+  - {fileID: -1724579527, guid: d0bb892fe11694343a3a1027cf27ef68, type: 3}
+  - {fileID: 2040646958, guid: d0bb892fe11694343a3a1027cf27ef68, type: 3}
+  - {fileID: -1903187, guid: d0bb892fe11694343a3a1027cf27ef68, type: 3}
+  - {fileID: 718301765, guid: d0bb892fe11694343a3a1027cf27ef68, type: 3}
+  - {fileID: -1432051703, guid: d0bb892fe11694343a3a1027cf27ef68, type: 3}
+  _blinkTimer: 1.918447
+  _mermaidPositions:
+  - {x: 0, y: 0}
+  - {x: -1000, y: 0}
+  - {x: 1000, y: 0}
+  - {x: 0, y: -325}
+  - {x: 0, y: 850}
+  - {x: 0, y: -850}
 --- !u!4 &835485229
 Transform:
   m_ObjectHideFlags: 0
@@ -1607,7 +1608,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 762.56195, y: 559.19446, z: -5.697247}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2077,7 +2078,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 732119905}
   - {fileID: 2024742876}
@@ -2298,7 +2299,7 @@ MonoBehaviour:
   inputField: {fileID: 969373072}
   outputText: {fileID: 18302292}
   typingSpeed: 0.02
-  apiKey: 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
+  apiKey: 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
   positionState: 0
   faceState: 0
 --- !u!4 &1583432906

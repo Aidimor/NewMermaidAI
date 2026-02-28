@@ -3,6 +3,7 @@ using UnityEngine.UI;
 
 public class MermaidController : MonoBehaviour
 {
+    [SerializeField] private OpenRouterChat _aiChat;
     public Animator _mermaidAnimator;
 
     public Image[] _eyesImage;
@@ -14,9 +15,11 @@ public class MermaidController : MonoBehaviour
     private RectTransform[] eyeRects;
     private Vector2[] initialPositions;
 
-    [SerializeField] private Image _mouthObject;
-    [SerializeField] private Sprite[] _allMouths;
+    public Image _mouthObject;
+    public Sprite[] _allMouths;
     [SerializeField] private float _blinkTimer;
+
+    [SerializeField] private Vector2[] _mermaidPositions;
 
     void Start()
     {
@@ -43,6 +46,7 @@ public class MermaidController : MonoBehaviour
         }
 
         HandleBlink();
+        MermaidPositionsVoid();
     }
 
     void MoveEye(RectTransform eye, Vector2 initialPos, RectTransform target)
@@ -74,6 +78,38 @@ public class MermaidController : MonoBehaviour
         {
             _mermaidAnimator.SetTrigger("Blink");
             _blinkTimer = Random.Range(5f, 10f);
+        }
+    }
+
+    void MermaidPositionsVoid()
+    {
+        _mermaidAnimator.GetComponent<RectTransform>().anchoredPosition = Vector2.Lerp(_mermaidAnimator.GetComponent<RectTransform>().anchoredPosition, _mermaidPositions[_aiChat.positionState], 3 * Time.deltaTime);
+        switch (_aiChat.positionState)
+        {
+            case 0:
+                _mermaidAnimator.GetComponent<RectTransform>().localScale = Vector2.Lerp(_mermaidAnimator.GetComponent<RectTransform>().localScale, new Vector2(1f, 1f), 3 * Time.deltaTime);
+                _mermaidAnimator.GetComponent<RectTransform>().rotation = Quaternion.Slerp(_mermaidAnimator.GetComponent<RectTransform>().rotation, Quaternion.Euler(0, 0, 0), 3 * Time.deltaTime);
+                break;
+            case 1:
+                _mermaidAnimator.GetComponent<RectTransform>().localScale = Vector2.Lerp(_mermaidAnimator.GetComponent<RectTransform>().localScale, new Vector2(1f, 1f), 3 * Time.deltaTime);
+                _mermaidAnimator.GetComponent<RectTransform>().rotation = Quaternion.Slerp(_mermaidAnimator.GetComponent<RectTransform>().rotation, Quaternion.Euler(0, 0, -90), 3 * Time.deltaTime);
+                break;
+            case 2:
+                _mermaidAnimator.GetComponent<RectTransform>().localScale = Vector2.Lerp(_mermaidAnimator.GetComponent<RectTransform>().localScale, new Vector2(1f, 1f), 3 * Time.deltaTime);
+                _mermaidAnimator.GetComponent<RectTransform>().rotation = Quaternion.Slerp(_mermaidAnimator.GetComponent<RectTransform>().rotation, Quaternion.Euler(0, 0, 90), 3 * Time.deltaTime);
+                break;
+            case 3:
+                _mermaidAnimator.GetComponent<RectTransform>().localScale = Vector2.Lerp(_mermaidAnimator.GetComponent<RectTransform>().localScale, new Vector2(1.5f, 1.5f), 3 * Time.deltaTime);
+                _mermaidAnimator.GetComponent<RectTransform>().rotation = Quaternion.Slerp(_mermaidAnimator.GetComponent<RectTransform>().rotation, Quaternion.Euler(0, 0, 0), 3 * Time.deltaTime);
+                break;
+            case 4:
+                _mermaidAnimator.GetComponent<RectTransform>().localScale = Vector2.Lerp(_mermaidAnimator.GetComponent<RectTransform>().localScale, new Vector2(1f, 1f), 3 * Time.deltaTime);
+                _mermaidAnimator.GetComponent<RectTransform>().rotation = Quaternion.Slerp(_mermaidAnimator.GetComponent<RectTransform>().rotation, Quaternion.Euler(0, 0, 180), 3 * Time.deltaTime);
+                break;
+            case 5:
+                _mermaidAnimator.GetComponent<RectTransform>().localScale = Vector2.Lerp(_mermaidAnimator.GetComponent<RectTransform>().localScale, new Vector2(1f, 1f), 3 * Time.deltaTime);
+                _mermaidAnimator.GetComponent<RectTransform>().rotation = Quaternion.Slerp(_mermaidAnimator.GetComponent<RectTransform>().rotation, Quaternion.Euler(0, 0, 0), 3 * Time.deltaTime);
+                break;
         }
     }
 }

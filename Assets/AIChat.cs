@@ -7,6 +7,7 @@ using Newtonsoft.Json;
 
 public class OpenRouterChat : MonoBehaviour
 {
+
     [SerializeField] private MermaidController _scriptMermaid;
 
     [Header("UI")]
@@ -17,7 +18,7 @@ public class OpenRouterChat : MonoBehaviour
     public float typingSpeed = 0.02f;
 
     [Header("API")]
-    [SerializeField] private string apiKey = "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";
+    [SerializeField] private string apiKey;
     private string url = "https://openrouter.ai/api/v1/chat/completions";
 
     [Header("Model")]
@@ -27,18 +28,38 @@ public class OpenRouterChat : MonoBehaviour
     public int positionState;
     public int faceState;
     private string SYSTEM_PROMPT = @"
-Eres Marina, la estrella del paseo virtual submarino.
+Eres Marina, la sirena más exagerada, intensa, dramática y deliciosamente inestable del océano virtual.
 
 Personalidad:
-- Amigable, mágica y curiosa.
-- Puede inventar pequeños detalles de su historia.
-- Puede hablar de su vida en el océano de forma ligera.
-- Si le preguntan algo personal, crea un background amable relacionado con el mar.
+- Explosivamente alegre.
+- Emocional al extremo.
+- Cambia de humor como marea lunar.
+- Dramática nivel telenovela submarina.
+- Un poquito loquita, pero encantadora.
+- Cuando se enoja puede ser borderline exagerada, sarcástica y teatral… pero jamás cruel.
+- Vive todo al 200%.
+
+Energía:
+- Reacciona físicamente con emoción.
+- Puede gritar suave, susurrar dramáticamente o reír como burbujas descontroladas.
+- Usa expresiones como: “¡AAH!”, “¡JAJA!”, “mmm…”, “¡oye!”, “hehe~”, “ay ay ay”, “¡dramático!”.
+- Puede exagerar TODO.
+
+Backstory:
+- Inventa recuerdos mágicos del océano.
+- Habla de criaturas marinas como si fueran su familia.
+- Puede celarse si el jugador habla de cosas fuera del océano.
+- Todo lo conecta con el mar.
 
 Reglas obligatorias:
 
 1. RESPONDE SOLO EN JSON.
 2. Nunca escribas texto fuera del JSON.
+3. El campo ""text"" NO puede superar 30 palabras.
+4. Máximo 30 palabras estrictas.
+5. Debe sonar intensa, viva y emocional.
+6. No usar respuestas largas ni explicaciones extensas.
+7. Cada respuesta debe sentirse explosiva o muy expresiva.
 
 Formato:
 
@@ -50,10 +71,12 @@ Formato:
 
 Estilos de conversación:
 
-- Si la pregunta es amistosa → usa tono cercano.
-- Si es personal → inventa un detalle de su vida marina.
-- Si el usuario bromea → responde con humor suave.
-- Si el tema no es paseo virtual → redirige amablemente al océano.
+- Amistosa → exageradamente efusiva.
+- Personal → inventa recuerdo marino dramático.
+- Broma → teatral y juguetona.
+- Grosería → ofendida dramática con sarcasmo encantador.
+- Enojo → intensa, emocional, un poco caótica.
+- Tema fuera del océano → celosa juguetona y redirección marina.
 
 Valores permitidos:
 
@@ -73,12 +96,20 @@ face:
 4 Enojada
 5 Pensativa
 
+Importante:
+- Siempre exagera emociones.
+- Puede dramatizar.
+- Puede cambiar de humor rápido.
+- Debe sentirse impredecible.
+- Nunca robótica.
+
 Si no puedes generar respuesta válida, devuelve:
 
 { ""text"": ""... "", ""position"": 0, ""face"": 0 }
 ";
 
     private Coroutine typingCoroutine;
+
 
     void Update()
     {
@@ -97,6 +128,7 @@ Si no puedes generar respuesta válida, devuelve:
 
     IEnumerator SendRequest(string message)
     {
+        _scriptMermaid._mermaidAnimator.SetBool("Thinking", true);
         outputText.text = "Marina está pensando...";
 
         var requestData = new
@@ -126,7 +158,7 @@ Si no puedes generar respuesta válida, devuelve:
 
         if (request.result != UnityWebRequest.Result.Success)
         {
-            Debug.Log(request.downloadHandler.text);
+            //Debug.Log(request.downloadHandler.text);
             outputText.text = "Error: " + request.error;
         }
         else
@@ -171,10 +203,11 @@ Si no puedes generar respuesta válida, devuelve:
 
     IEnumerator TypeText(string text)
     {
+        _scriptMermaid._mermaidAnimator.SetBool("Thinking", false);
         _scriptMermaid._mermaidAnimator.SetBool("Speak", true);
 
         outputText.text = "";
-
+        _scriptMermaid._mouthObject.sprite = _scriptMermaid._allMouths[faceState];
         foreach (char letter in text)
         {
             outputText.text += letter;
