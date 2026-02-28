@@ -1,0 +1,1225 @@
+fileFormatVersion: 2
+guid: d0bb892fe11694343a3a1027cf27ef68
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: mermaid avatar_22
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 1503
+        width: 348
+        height: 502
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 629c68645f11ef144bc8ec0c4c84fde6
+      internalID: 158958635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mermaid avatar_31
+      rect:
+        serializedVersion: 2
+        x: 2539
+        y: 1257
+        width: 521
+        height: 736
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 318b58a4677e87d42a79fe1c0da24d04
+      internalID: -1846657485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mermaid avatar_37
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 1508
+        width: 292
+        height: 465
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9851ae90ec88e644497de8983a8efa60
+      internalID: -1939696052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mermaid avatar_39
+      rect:
+        serializedVersion: 2
+        x: 1125
+        y: 1785
+        width: 65
+        height: 173
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f4d48b107569b848aad69ced23af4e2
+      internalID: 1334352538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mermaid avatar_40
+      rect:
+        serializedVersion: 2
+        x: 1532
+        y: 1758
+        width: 61
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a0e2e8c93449734dbbb11ea37c75e3e
+      internalID: -229866218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mermaid avatar_43
+      rect:
+        serializedVersion: 2
+        x: 1745
+        y: 1720
+        width: 117
+        height: 230
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1a6818762baa994e8aa26433390881f
+      internalID: -365729526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mermaid avatar_46
+      rect:
+        serializedVersion: 2
+        x: 2221
+        y: 1725
+        width: 112
+        height: 225
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb48b29d5cd1b7a4b83581401eed9f5e
+      internalID: -1476306873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mermaid avatar_227
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 987
+        width: 597
+        height: 440
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 481047611cff62d419fb5fcbe5e8d3e2
+      internalID: -704394946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mermaid avatar_236
+      rect:
+        serializedVersion: 2
+        x: 1251
+        y: 1263
+        width: 64
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a860dbab327424d41add4ea56880c678
+      internalID: -1317626726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mermaid avatar_237
+      rect:
+        serializedVersion: 2
+        x: 1715
+        y: 1046
+        width: 233
+        height: 262
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 393cd7cbe348b04489bbda9781e39604
+      internalID: 999120337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mermaid avatar_239
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 1096
+        width: 47
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e3d2a99fe16bfd459a0c301b26738c0
+      internalID: 1778730258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mermaid avatar_240
+      rect:
+        serializedVersion: 2
+        x: 2044
+        y: 1096
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c7f22d01f86e5845bfe5c624919b220
+      internalID: 1886895359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mermaid avatar_241
+      rect:
+        serializedVersion: 2
+        x: 1235
+        y: 1069
+        width: 46
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d20bdf9213be8bc4289bab5a095f7cf2
+      internalID: -865210686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mermaid avatar_242
+      rect:
+        serializedVersion: 2
+        x: 1329
+        y: 1069
+        width: 48
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cf4f002f72cde24f88597e0700186c7
+      internalID: 357430029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mermaid avatar_243
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 1084
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66c5609088ae78f45b4e1ebe5e6113c5
+      internalID: 1134936698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mermaid avatar_244
+      rect:
+        serializedVersion: 2
+        x: 1479
+        y: 1013
+        width: 92
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e800438261eb774e98c07a0db9578ab
+      internalID: 685856644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mermaid avatar_245
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 1008
+        width: 47
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18652c729a04b5e4ea54c4980dafa7c4
+      internalID: -357260702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mermaid avatar_246
+      rect:
+        serializedVersion: 2
+        x: 1254
+        y: 954
+        width: 48
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d3aaea97fa4b3f4ea4bf8a8eeee3825
+      internalID: -636556143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mermaid avatar_247
+      rect:
+        serializedVersion: 2
+        x: 1308
+        y: 954
+        width: 48
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 070d2f02dada31c4d8f8f7a0925fbfff
+      internalID: -122650675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mermaid avatar_248
+      rect:
+        serializedVersion: 2
+        x: 1340
+        y: 1008
+        width: 47
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 226b76cc71c07b647bc9a85a05306256
+      internalID: -802120522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mermaid avatar_251
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 551
+        width: 281
+        height: 325
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d6f311724ebea14889a19b0278e80f4
+      internalID: 2037843046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mermaid avatar_253
+      rect:
+        serializedVersion: 2
+        x: 1698
+        y: 694
+        width: 154
+        height: 206
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 842ef95121234c84786c2740d48347e2
+      internalID: 79435964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mermaid avatar_255
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 348
+        width: 303
+        height: 407
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8b60590a1f04004f90d9756561ed12d
+      internalID: 642917794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mermaid avatar_261
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 0
+        width: 264
+        height: 383
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f76dbab00332aa04baa95357eb5d7a87
+      internalID: 748043490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mermaid avatar_262
+      rect:
+        serializedVersion: 2
+        x: 938
+        y: 63
+        width: 288
+        height: 371
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75d6764acd248d94685bb46bb6f1160f
+      internalID: -1484467326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mermaid avatar_264
+      rect:
+        serializedVersion: 2
+        x: 1354
+        y: 81
+        width: 236
+        height: 266
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f45b17fcc2e0eae4eb17c8985f1af85c
+      internalID: 1682391628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mermaid avatar_265
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 143
+        width: 109
+        height: 184
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b42335431812eed44ae9c5abaefa5809
+      internalID: -574435776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mermaid avatar_0
+      rect:
+        serializedVersion: 2
+        x: 2037
+        y: 1432
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b39b12f7561cd244ea4564c7fca5d6ae
+      internalID: 79125390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mermaid avatar_1
+      rect:
+        serializedVersion: 2
+        x: 2181
+        y: 32
+        width: 863
+        height: 1044
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b81f07de23941a43b17e9d365c528ab
+      internalID: 314792170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mermaid avatar_2
+      rect:
+        serializedVersion: 2
+        x: 2031
+        y: 783
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fade0a4c5dc79fa41868b0f0d969c010
+      internalID: -695818322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mermaid avatar_3
+      rect:
+        serializedVersion: 2
+        x: 2031
+        y: 487
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c34ea24615c8b1e4e8323057ee43a657
+      internalID: 718301765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mermaid avatar_4
+      rect:
+        serializedVersion: 2
+        x: 1699
+        y: 485
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9b28c298dab83942b43316ea3d6230b
+      internalID: 1139952585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mermaid avatar_5
+      rect:
+        serializedVersion: 2
+        x: 1365
+        y: 481
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76cadac0fa4e5c0409a455ccc3047f00
+      internalID: -1724579527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mermaid avatar_6
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 485
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60f556b89b108cd40a53770e072fb360
+      internalID: -222179175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mermaid avatar_7
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 775
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8f60baedcf648741aa19c88ca0d948f
+      internalID: -1903187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mermaid avatar_8
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 1096
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43f7b687cc2d47547b6780e036ca4516
+      internalID: 2040646958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mermaid avatar_9
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 1449
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ce40ee718c22334fab10b383884dfc3
+      internalID: 115936231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mermaid avatar_10
+      rect:
+        serializedVersion: 2
+        x: 1375
+        y: 1447
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8446044cfb43c064fa511531ea4f57ad
+      internalID: 1188421814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mermaid avatar_11
+      rect:
+        serializedVersion: 2
+        x: 1711
+        y: 1440
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 521b8b82df178c04aaae6be929376380
+      internalID: -1432051703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      mermaid avatar_0: 79125390
+      mermaid avatar_1: 314792170
+      mermaid avatar_10: 1188421814
+      mermaid avatar_100: -205665874
+      mermaid avatar_101: 632251784
+      mermaid avatar_102: 1955395889
+      mermaid avatar_103: 222581190
+      mermaid avatar_104: 1771834865
+      mermaid avatar_105: 745566416
+      mermaid avatar_106: 238289623
+      mermaid avatar_107: 2064898356
+      mermaid avatar_108: -1081263404
+      mermaid avatar_109: -521311400
+      mermaid avatar_11: -1432051703
+      mermaid avatar_110: 693382008
+      mermaid avatar_111: -1900644777
+      mermaid avatar_112: 301554560
+      mermaid avatar_113: 22048723
+      mermaid avatar_114: -407610520
+      mermaid avatar_115: -1538223086
+      mermaid avatar_116: -477626966
+      mermaid avatar_117: -1778131783
+      mermaid avatar_118: -663916366
+      mermaid avatar_119: 147452967
+      mermaid avatar_12: -1748804663
+      mermaid avatar_120: -2035642062
+      mermaid avatar_121: -1884959589
+      mermaid avatar_122: -1451608293
+      mermaid avatar_123: -322583929
+      mermaid avatar_124: -578490219
+      mermaid avatar_125: 1801119821
+      mermaid avatar_126: -99895588
+      mermaid avatar_127: -2021314082
+      mermaid avatar_128: -100851068
+      mermaid avatar_129: 1101886044
+      mermaid avatar_13: -1704355368
+      mermaid avatar_130: -158507601
+      mermaid avatar_131: -480191075
+      mermaid avatar_132: 60427002
+      mermaid avatar_133: 121851332
+      mermaid avatar_134: 1055535146
+      mermaid avatar_135: 292865398
+      mermaid avatar_136: -336750122
+      mermaid avatar_137: -1680396588
+      mermaid avatar_138: 1087537761
+      mermaid avatar_139: 1947080007
+      mermaid avatar_14: 926408954
+      mermaid avatar_140: -385366261
+      mermaid avatar_141: 771159632
+      mermaid avatar_142: 844290838
+      mermaid avatar_143: -786290928
+      mermaid avatar_144: 686560385
+      mermaid avatar_145: 591244843
+      mermaid avatar_146: 728803207
+      mermaid avatar_147: -965347375
+      mermaid avatar_148: -1911839920
+      mermaid avatar_149: 1707525827
+      mermaid avatar_15: -2111334383
+      mermaid avatar_150: -642658278
+      mermaid avatar_151: -375172064
+      mermaid avatar_152: -2021285428
+      mermaid avatar_153: 281060736
+      mermaid avatar_154: -2044832451
+      mermaid avatar_155: 985234371
+      mermaid avatar_156: 855050284
+      mermaid avatar_157: 216028600
+      mermaid avatar_158: -667316132
+      mermaid avatar_159: 1316747510
+      mermaid avatar_16: -2024611663
+      mermaid avatar_160: -248259106
+      mermaid avatar_161: 968244172
+      mermaid avatar_162: 1215482097
+      mermaid avatar_163: 1654922268
+      mermaid avatar_164: 1871604302
+      mermaid avatar_165: 1814999462
+      mermaid avatar_166: -1148248177
+      mermaid avatar_167: -388151125
+      mermaid avatar_168: -1149569258
+      mermaid avatar_169: 1970351693
+      mermaid avatar_17: -1864104573
+      mermaid avatar_170: -1562666474
+      mermaid avatar_171: 304915603
+      mermaid avatar_172: 2035799158
+      mermaid avatar_173: -1519198289
+      mermaid avatar_174: 475250607
+      mermaid avatar_175: 1380838286
+      mermaid avatar_176: 1165588611
+      mermaid avatar_177: 1124780075
+      mermaid avatar_178: -661699429
+      mermaid avatar_179: 1029510373
+      mermaid avatar_18: 878438240
+      mermaid avatar_180: 2007805350
+      mermaid avatar_181: 1753664055
+      mermaid avatar_182: 1741382549
+      mermaid avatar_183: -935062890
+      mermaid avatar_184: 1927300200
+      mermaid avatar_185: 1960462262
+      mermaid avatar_186: -1717396883
+      mermaid avatar_187: -1316443954
+      mermaid avatar_188: 1772722338
+      mermaid avatar_189: 1672214425
+      mermaid avatar_19: -1253252226
+      mermaid avatar_190: 1503507762
+      mermaid avatar_191: 1261297711
+      mermaid avatar_192: 759052866
+      mermaid avatar_193: 1742355316
+      mermaid avatar_194: 985169288
+      mermaid avatar_195: 1370568582
+      mermaid avatar_196: 922583064
+      mermaid avatar_197: 458763024
+      mermaid avatar_198: -1850222532
+      mermaid avatar_199: -2020361508
+      mermaid avatar_2: -695818322
+      mermaid avatar_20: -1737759486
+      mermaid avatar_200: 911308343
+      mermaid avatar_201: 1799551387
+      mermaid avatar_202: 467760306
+      mermaid avatar_203: -1400932927
+      mermaid avatar_204: -1207877004
+      mermaid avatar_205: -641068043
+      mermaid avatar_206: 1866851457
+      mermaid avatar_207: 1878669879
+      mermaid avatar_208: 640178723
+      mermaid avatar_209: -972013957
+      mermaid avatar_21: -2057778356
+      mermaid avatar_210: 632105443
+      mermaid avatar_211: 1425049472
+      mermaid avatar_212: 548102904
+      mermaid avatar_213: -1568616097
+      mermaid avatar_214: 523911452
+      mermaid avatar_215: 2017426478
+      mermaid avatar_216: -1380703882
+      mermaid avatar_217: -116331698
+      mermaid avatar_218: -1354895205
+      mermaid avatar_219: -2122928632
+      mermaid avatar_22: 158958635
+      mermaid avatar_220: -1592047180
+      mermaid avatar_221: -2020506645
+      mermaid avatar_222: -377235265
+      mermaid avatar_223: -1207744546
+      mermaid avatar_224: 1708206332
+      mermaid avatar_225: -472232476
+      mermaid avatar_226: -1830632823
+      mermaid avatar_227: -704394946
+      mermaid avatar_228: 744188673
+      mermaid avatar_229: -448765563
+      mermaid avatar_23: 2086978968
+      mermaid avatar_230: 351405947
+      mermaid avatar_231: -1036239837
+      mermaid avatar_232: 1926085954
+      mermaid avatar_233: -592017872
+      mermaid avatar_234: -2018704543
+      mermaid avatar_235: -895798751
+      mermaid avatar_236: -1317626726
+      mermaid avatar_237: 999120337
+      mermaid avatar_238: -873818462
+      mermaid avatar_239: 1778730258
+      mermaid avatar_24: 467704991
+      mermaid avatar_240: 1886895359
+      mermaid avatar_241: -865210686
+      mermaid avatar_242: 357430029
+      mermaid avatar_243: 1134936698
+      mermaid avatar_244: 685856644
+      mermaid avatar_245: -357260702
+      mermaid avatar_246: -636556143
+      mermaid avatar_247: -122650675
+      mermaid avatar_248: -802120522
+      mermaid avatar_249: -1869729865
+      mermaid avatar_25: 701712864
+      mermaid avatar_250: 270752569
+      mermaid avatar_251: 2037843046
+      mermaid avatar_252: -1935708363
+      mermaid avatar_253: 79435964
+      mermaid avatar_254: 1458997172
+      mermaid avatar_255: 642917794
+      mermaid avatar_256: -1277721058
+      mermaid avatar_257: 1434915777
+      mermaid avatar_258: -1920250293
+      mermaid avatar_259: 1165734377
+      mermaid avatar_26: -638248477
+      mermaid avatar_260: -387698347
+      mermaid avatar_261: 748043490
+      mermaid avatar_262: -1484467326
+      mermaid avatar_263: 412079855
+      mermaid avatar_264: 1682391628
+      mermaid avatar_265: -574435776
+      mermaid avatar_27: 1379679302
+      mermaid avatar_28: 696379386
+      mermaid avatar_29: -1190286477
+      mermaid avatar_3: 718301765
+      mermaid avatar_30: -182508764
+      mermaid avatar_31: -1846657485
+      mermaid avatar_32: -1331726957
+      mermaid avatar_33: 1285071854
+      mermaid avatar_34: -1081515814
+      mermaid avatar_35: 466367338
+      mermaid avatar_36: -391636856
+      mermaid avatar_37: -1939696052
+      mermaid avatar_38: -1756286168
+      mermaid avatar_39: 1334352538
+      mermaid avatar_4: 1139952585
+      mermaid avatar_40: -229866218
+      mermaid avatar_41: -1445556581
+      mermaid avatar_42: 178644761
+      mermaid avatar_43: -365729526
+      mermaid avatar_44: -449225364
+      mermaid avatar_45: 430015937
+      mermaid avatar_46: -1476306873
+      mermaid avatar_47: -398177766
+      mermaid avatar_48: -2070536732
+      mermaid avatar_49: -465230798
+      mermaid avatar_5: -1724579527
+      mermaid avatar_50: 1468383579
+      mermaid avatar_51: 1290442047
+      mermaid avatar_52: -515441815
+      mermaid avatar_53: -71251037
+      mermaid avatar_54: -1493325808
+      mermaid avatar_55: -1978826840
+      mermaid avatar_56: 1407188887
+      mermaid avatar_57: -598509227
+      mermaid avatar_58: -1986223205
+      mermaid avatar_59: -2076861378
+      mermaid avatar_6: -222179175
+      mermaid avatar_60: 1261548145
+      mermaid avatar_61: 234808773
+      mermaid avatar_62: 1087412087
+      mermaid avatar_63: 468240926
+      mermaid avatar_64: 868403991
+      mermaid avatar_65: -887009629
+      mermaid avatar_66: 1985206656
+      mermaid avatar_67: 1469083523
+      mermaid avatar_68: -1469170578
+      mermaid avatar_69: 357540363
+      mermaid avatar_7: -1903187
+      mermaid avatar_70: 1047938690
+      mermaid avatar_71: 1573072810
+      mermaid avatar_72: 1045590213
+      mermaid avatar_73: 63026113
+      mermaid avatar_74: 1674765403
+      mermaid avatar_75: -1471396962
+      mermaid avatar_76: -289579085
+      mermaid avatar_77: 1243303588
+      mermaid avatar_78: 1582850623
+      mermaid avatar_79: -1523100936
+      mermaid avatar_8: 2040646958
+      mermaid avatar_80: -167305084
+      mermaid avatar_81: -1869869434
+      mermaid avatar_82: -458900898
+      mermaid avatar_83: 70204617
+      mermaid avatar_84: -594867011
+      mermaid avatar_85: 123127382
+      mermaid avatar_86: -1018566503
+      mermaid avatar_87: 1475528956
+      mermaid avatar_88: -2105231462
+      mermaid avatar_89: -1581933378
+      mermaid avatar_9: 115936231
+      mermaid avatar_90: 1709697027
+      mermaid avatar_91: 230910445
+      mermaid avatar_92: 1464727947
+      mermaid avatar_93: -231158581
+      mermaid avatar_94: 1256040349
+      mermaid avatar_95: 672057200
+      mermaid avatar_96: -178247542
+      mermaid avatar_97: 233906366
+      mermaid avatar_98: -75816819
+      mermaid avatar_99: -1628232169
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
