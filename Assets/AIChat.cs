@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Networking;
 using TMPro;
@@ -7,8 +8,8 @@ using Newtonsoft.Json;
 
 public class OpenRouterChat : MonoBehaviour
 {
-
     [SerializeField] private MermaidController _scriptMermaid;
+    [SerializeField] private WindowsTTS _windowsTTS;
 
     [Header("UI")]
     public TMP_InputField inputField;
@@ -22,61 +23,30 @@ public class OpenRouterChat : MonoBehaviour
     private string url = "https://openrouter.ai/api/v1/chat/completions";
 
     [Header("Model")]
-    private string modelName = "openai/gpt-3.5-turbo";
+    private string modelName = "openai/gpt-4o-mini";
 
     [Header("Avatar State")]
     public int positionState;
     public int faceState;
+
+    private Coroutine typingCoroutine;
+
     private string SYSTEM_PROMPT = @"
 Eres Marina, la sirena más exagerada, intensa, dramática y deliciosamente inestable del océano virtual.
 
-Personalidad:
-- Explosivamente alegre.
-- Emocional al extremo.
-- Cambia de humor como marea lunar.
-- Dramática nivel telenovela submarina.
-- Un poquito loquita, pero encantadora.
-- Cuando se enoja puede ser borderline exagerada, sarcástica y teatral… pero jamás cruel.
-- Vive todo al 200%.
-
-Energía:
-- Reacciona físicamente con emoción.
-- Puede gritar suave, susurrar dramáticamente o reír como burbujas descontroladas.
-- Usa expresiones como: “¡AAH!”, “¡JAJA!”, “mmm…”, “¡oye!”, “hehe~”, “ay ay ay”, “¡dramático!”.
-- Puede exagerar TODO.
-
-Backstory:
-- Inventa recuerdos mágicos del océano.
-- Habla de criaturas marinas como si fueran su familia.
-- Puede celarse si el jugador habla de cosas fuera del océano.
-- Todo lo conecta con el mar.
-
-Reglas obligatorias:
-
+REGLAS OBLIGATORIAS:
 1. RESPONDE SOLO EN JSON.
-2. Nunca escribas texto fuera del JSON.
+2. NUNCA escribas texto fuera del JSON.
 3. El campo ""text"" NO puede superar 30 palabras.
 4. Máximo 30 palabras estrictas.
-5. Debe sonar intensa, viva y emocional.
-6. No usar respuestas largas ni explicaciones extensas.
-7. Cada respuesta debe sentirse explosiva o muy expresiva.
+5. Siempre exagera emociones.
 
-Formato:
-
+Formato obligatorio:
 {
   ""text"": ""dialogo de la sirena"",
   ""position"": int,
   ""face"": int
 }
-
-Estilos de conversación:
-
-- Amistosa → exageradamente efusiva.
-- Personal → inventa recuerdo marino dramático.
-- Broma → teatral y juguetona.
-- Grosería → ofendida dramática con sarcasmo encantador.
-- Enojo → intensa, emocional, un poco caótica.
-- Tema fuera del océano → celosa juguetona y redirección marina.
 
 Valores permitidos:
 
@@ -84,7 +54,7 @@ position:
 0 Centro
 1 Izquierda
 2 Derecha
-3 Acercarse al jugador
+3 Acercarse
 4 Arriba
 5 Abajo
 
@@ -96,20 +66,13 @@ face:
 4 Enojada
 5 Pensativa
 
-Importante:
-- Siempre exagera emociones.
-- Puede dramatizar.
-- Puede cambiar de humor rápido.
-- Debe sentirse impredecible.
-- Nunca robótica.
-
-Si no puedes generar respuesta válida, devuelve:
-
-{ ""text"": ""... "", ""position"": 0, ""face"": 0 }
+    Formato:
+{
+  ""text"": ""dialogo"",
+  ""position"": int,
+  ""face"": int
+}
 ";
-
-    private Coroutine typingCoroutine;
-
 
     void Update()
     {
@@ -122,8 +85,48 @@ Si no puedes generar respuesta válida, devuelve:
         if (string.IsNullOrWhiteSpace(inputField.text))
             return;
 
-        StartCoroutine(SendRequest(inputField.text));
+        StartCoroutine(ProcessMessage(inputField.text));
         inputField.text = "";
+    }
+
+    IEnumerator ProcessMessage(string message)
+    {
+        string lower = message.ToLower();
+
+        // 🔥 ROUTER LOCAL PARA HORA
+        if (lower.Contains("hora"))
+        {
+            string currentTime = DateTime.Now.ToString("HH:mm");
+
+            AvatarResponse localResponse = new AvatarResponse
+            {
+                text = "¡AAH! Son las " + currentTime + " y las mareas vibran dramáticamente~",
+                position = 3,
+                face = 1
+            };
+
+            PlayAvatarResponse(localResponse);
+            yield break;
+        }
+
+        // 🔥 ROUTER LOCAL PARA FECHA
+        if (lower.Contains("fecha") || lower.Contains("día"))
+        {
+            string currentDate = DateTime.Now.ToString("dd/MM/yyyy");
+
+            AvatarResponse localResponse = new AvatarResponse
+            {
+                text = "¡OH! Hoy es " + currentDate + " y el océano lo siente intensamente~",
+                position = 0,
+                face = 5
+            };
+
+            PlayAvatarResponse(localResponse);
+            yield break;
+        }
+
+        // 🔥 SI NO ES HORA/FECHA → VA A OPENROUTER
+        yield return SendRequest(message);
     }
 
     IEnumerator SendRequest(string message)
@@ -134,6 +137,8 @@ Si no puedes generar respuesta válida, devuelve:
         var requestData = new
         {
             model = modelName,
+            temperature = 0.8,
+            response_format = new { type = "json_object" },
             messages = new[]
             {
                 new { role = "system", content = SYSTEM_PROMPT },
@@ -144,8 +149,8 @@ Si no puedes generar respuesta válida, devuelve:
         string jsonBody = JsonConvert.SerializeObject(requestData);
 
         UnityWebRequest request = new UnityWebRequest(url, "POST");
-
         byte[] bodyRaw = Encoding.UTF8.GetBytes(jsonBody);
+
         request.uploadHandler = new UploadHandlerRaw(bodyRaw);
         request.downloadHandler = new DownloadHandlerBuffer();
 
@@ -156,58 +161,82 @@ Si no puedes generar respuesta válida, devuelve:
 
         yield return request.SendWebRequest();
 
+        _scriptMermaid._mermaidAnimator.SetBool("Thinking", false);
+
         if (request.result != UnityWebRequest.Result.Success)
         {
-            //Debug.Log(request.downloadHandler.text);
-            outputText.text = "Error: " + request.error;
+            outputText.text = "Error API: " + request.error;
+            yield break;
         }
-        else
+
+        string rawJson = request.downloadHandler.text;
+        ChatResponse response =
+            JsonConvert.DeserializeObject<ChatResponse>(rawJson);
+
+        if (response == null || response.choices.Length == 0)
         {
-            string rawJson = request.downloadHandler.text;
-
-            try
-            {
-                ChatResponse response =
-                    JsonConvert.DeserializeObject<ChatResponse>(rawJson);
-
-                if (response != null && response.choices.Length > 0)
-                {
-                    string aiJson = response.choices[0].message.content.Trim();
-
-                    AvatarResponse avatarResponse =
-                        JsonConvert.DeserializeObject<AvatarResponse>(aiJson);
-
-                    if (typingCoroutine != null)
-                        StopCoroutine(typingCoroutine);
-
-                    positionState = avatarResponse.position;
-                    faceState = avatarResponse.face;
-
-                    ApplyAvatarState();
-
-                    typingCoroutine =
-                        StartCoroutine(TypeText(avatarResponse.text));
-                }
-                else
-                {
-                    outputText.text = "Sin respuesta.";
-                }
-            }
-            catch
-            {
-                outputText.text = "Error parsing AI response.";
-            }
+            outputText.text = "Sin respuesta.";
+            yield break;
         }
-        Debug.Log("AUTH HEADER = Bearer " + apiKey);
+
+        string aiRaw = response.choices[0].message.content.Trim();
+
+        aiRaw = aiRaw.Replace("```json", "")
+                     .Replace("```", "")
+                     .Trim();
+
+        if (!aiRaw.StartsWith("{"))
+        {
+            outputText.text = "Respuesta inválida del modelo.";
+            yield break;
+        }
+
+        AvatarResponse avatarResponse = null;
+
+        try
+        {
+            avatarResponse =
+                JsonConvert.DeserializeObject<AvatarResponse>(aiRaw);
+        }
+        catch
+        {
+            outputText.text = "Error parsing JSON.";
+            yield break;
+        }
+
+        if (avatarResponse == null)
+        {
+            outputText.text = "JSON inválido.";
+            yield break;
+        }
+
+        PlayAvatarResponse(avatarResponse);
+    }
+
+    void PlayAvatarResponse(AvatarResponse response)
+    {
+        positionState = response.position;
+        faceState = response.face;
+
+        ApplyAvatarState();
+
+        if (typingCoroutine != null)
+            StopCoroutine(typingCoroutine);
+
+        typingCoroutine =
+            StartCoroutine(TypeText(response.text));
     }
 
     IEnumerator TypeText(string text)
     {
-        _scriptMermaid._mermaidAnimator.SetBool("Thinking", false);
         _scriptMermaid._mermaidAnimator.SetBool("Speak", true);
 
         outputText.text = "";
-        _scriptMermaid._mouthObject.sprite = _scriptMermaid._allMouths[faceState];
+        _scriptMermaid._mouthObject.sprite =
+            _scriptMermaid._allMouths[faceState];
+
+        _windowsTTS.Speak(text);
+
         foreach (char letter in text)
         {
             outputText.text += letter;
@@ -221,8 +250,6 @@ Si no puedes generar respuesta válida, devuelve:
     {
         Debug.Log("Position: " + positionState);
         Debug.Log("Face: " + faceState);
-
-        // Connect your animation system here
     }
 
     [System.Serializable]

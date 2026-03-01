@@ -1,0 +1,3880 @@
+fileFormatVersion: 2
+guid: ff98ca7ebf95bd445ad2461981c95a69
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sea assetws_0
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 656
+        width: 61
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f17e43d7194fcba40bcb08cc2480eb56
+      internalID: -340612768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_1
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 685
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c43a9f276ee0ff41ab4605210f86bc9
+      internalID: 1593649811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_2
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 663
+        width: 64
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d899f471955f7f4eab1b3650da300da
+      internalID: -1683827598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_3
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 621
+        width: 58
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d099222cf103593418b7c7618c6749b7
+      internalID: -242585989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_4
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 631
+        width: 42
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d1e745bf3cee9f45b0abe41b7e59406
+      internalID: -32332755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_5
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 635
+        width: 37
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c10a90f598e981649a106a696698516a
+      internalID: 603851406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_6
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 634
+        width: 37
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bb123fbaf344744996f65ac730b9367
+      internalID: -1558460875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_7
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 642
+        width: 60
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c356f95faa0d8b4789cc19282ee57ca
+      internalID: -56328438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_8
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 642
+        width: 63
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d5e1501e83f81f489dd9fb2613bc75a
+      internalID: -2008463728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_9
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 651
+        width: 51
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebad97dd6f91c994eb70a391820f72b2
+      internalID: 1136661502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_10
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 652
+        width: 46
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac694da26f3e0b449b96663f1c59db4c
+      internalID: -2009134920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_11
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 658
+        width: 73
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c239885549902040a7c76f52063157d
+      internalID: -1888772016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_12
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 665
+        width: 64
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df0b7d38ac97a3d49973b862909611c9
+      internalID: 1428008095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_13
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 619
+        width: 58
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd49ab9faf187574b97065fef2a65deb
+      internalID: -1625523303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_14
+      rect:
+        serializedVersion: 2
+        x: 931
+        y: 536
+        width: 72
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2047905ab1c8e66408216c1d20651686
+      internalID: -1817257941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_15
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 634
+        width: 37
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86de1c74806e7f5489efec33e2348e9c
+      internalID: 960387286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_16
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 538
+        width: 52
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8688adee3750b343bb8b76f60195be6
+      internalID: -1388830221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_17
+      rect:
+        serializedVersion: 2
+        x: 1142
+        y: 552
+        width: 68
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b894c7b38f2c4ea4f8cbe6576ed14646
+      internalID: 1745513938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_18
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 652
+        width: 40
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3156738d76ab7e449983c0f6d318c4e
+      internalID: 2068189152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_19
+      rect:
+        serializedVersion: 2
+        x: 1230
+        y: 540
+        width: 150
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c82478e604313f849808af039a86b337
+      internalID: 761554888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_20
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 603
+        width: 63
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a14bfc4808b6ba4b97e24106282ec41
+      internalID: -2060969826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_21
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 615
+        width: 64
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c36e396bb56d4d4fa41978a185a2d12
+      internalID: 1182563256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_22
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 618
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e59a2bc168e42245b46f675127f874c
+      internalID: 61606229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_23
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 575
+        width: 92
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bb161ea61059fb418ddda85c3684075
+      internalID: -741373001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_24
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 577
+        width: 88
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f08fb1de8ea89442b173530f049e102
+      internalID: 322237636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_25
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 581
+        width: 97
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69a48e4079af3bb428b76376a84828b1
+      internalID: -1622515199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_26
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 607
+        width: 63
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22fefeed158bbb842a945d941930cd27
+      internalID: -1857140616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_27
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 617
+        width: 66
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93aad2a791bd0bd4ea57ed4f234e08b9
+      internalID: 1398207048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_28
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 574
+        width: 41
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef604c40621e5f34dbe3af9a11222895
+      internalID: 2132042952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_29
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 576
+        width: 37
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c5733c7e8de8ef4a9a8f00b0939a18e
+      internalID: 678622914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_30
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 607
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31a66ae9159e4f645a0326cfdc2599c9
+      internalID: -363499902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_31
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 607
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3e5950ca3224594ea4a5e46cad5eef9
+      internalID: -939732612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_32
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 583
+        width: 28
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c89846719b6ef8449be9bc42320616c0
+      internalID: -169988773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_33
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 598
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcd4883ff339b2e4a9009f9e09673378
+      internalID: -121588722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_34
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 537
+        width: 37
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c31abb917f8312143b143aabe5e64091
+      internalID: 604610882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_35
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 580
+        width: 22
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1c7cb4fa32e6264ea7f87d4ecfc61f0
+      internalID: -1461605711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_36
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 571
+        width: 39
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5670ac7c33bd8c44897d201a479813aa
+      internalID: -1252448962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_37
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 526
+        width: 51
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 116809ba550b18041a89aadd75a3fb61
+      internalID: 264215010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_38
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 586
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55353f71afaee0a46bae7aa7fd4f5941
+      internalID: 765725210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_39
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 579
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fa7371f8f0d52a41a28a5c38becbe1a
+      internalID: -1137524922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_40
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 573
+        width: 39
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43cc9ac9f695a1647a4dd0805be33364
+      internalID: -991286531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_41
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 518
+        width: 52
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b55708500f89cbc43b80ed6275eea741
+      internalID: -918794617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_42
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 574
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c29efa60a4aafc46b2e75448c042ce6
+      internalID: -1875781765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_43
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 571
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0abfe6d1821af2448ccfad5fc1f0c58
+      internalID: -1891797165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_44
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 533
+        width: 44
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 014bbef001f58274f83a181560ae35eb
+      internalID: -1551295611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_45
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 566
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d0309b0aa2cf2b4cb9c87e7e06aa5af
+      internalID: 1273120435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_46
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 515
+        width: 30
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e56646430300fbf49a8df991fe032fea
+      internalID: -998660732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_47
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 507
+        width: 70
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 108f833e3ee10c64a81469bd05c7ffe4
+      internalID: -1020599492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_48
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 531
+        width: 50
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a10d393cbf2995249a438dc70ba139cb
+      internalID: 1917687100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_49
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 519
+        width: 48
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fa57d200b3973a49a3c0895c2b125ef
+      internalID: -976735884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_50
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 518
+        width: 42
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12bf9a3bd9e85594fbcf2a0c7440c795
+      internalID: 507911876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_51
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 517
+        width: 32
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c83ab16149d197243968bcd86a958c4a
+      internalID: 1348115993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_52
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 516
+        width: 28
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 299b2dbf989dc944094f0c522b37a7c4
+      internalID: -1046042727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_53
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 519
+        width: 58
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1b77389a3fd33f4382d0a0c629ac270
+      internalID: -1532629476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_54
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 524
+        width: 29
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9b85c423fcb5bf41942abb060b6675d
+      internalID: -2113004406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_55
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 525
+        width: 53
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a81adfe3c1b5f2419745255b7467794
+      internalID: -551915803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_56
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 529
+        width: 61
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd3d6e9bab29d6d46b282577289963c9
+      internalID: 1256596997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_57
+      rect:
+        serializedVersion: 2
+        x: 1135
+        y: 480
+        width: 63
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac9cf1373dfcb2243a0d9763cfdf37be
+      internalID: 2081653146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_58
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 423
+        width: 91
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee74240dd262a6140a75cb7a8b467f4d
+      internalID: 2465643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_59
+      rect:
+        serializedVersion: 2
+        x: 1266
+        y: 474
+        width: 47
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b75e1a96f0960747baee504f2515f87
+      internalID: -938081041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_60
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 448
+        width: 52
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d25f0d5d4ad7057418725decfe997f9a
+      internalID: 565984263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_61
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 449
+        width: 46
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fd1afefb5e719e4081cfa02ef5d4056
+      internalID: -2048063164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_62
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 449
+        width: 49
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec36d95ae84696f4ba2e2a5f3123c96a
+      internalID: -600247036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_63
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 448
+        width: 38
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f0ea9b5e4d5a6a4abfdb80cc04bdd5a
+      internalID: -711008903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_64
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 443
+        width: 37
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd17150fc2c5c0148a6175bb689bc1ab
+      internalID: 766008590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_65
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 449
+        width: 67
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfc759f64cf71da478deb81bcdd95a3b
+      internalID: 1880213124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_66
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 498
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25180d0ecbab29e4a8e34537f842c376
+      internalID: -839257205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_67
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 441
+        width: 60
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6113cce3fd4f4a545ad165adb543d436
+      internalID: 107542163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_68
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 488
+        width: 33
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7770e4bc4ccc2c94ea18b7c57fddac0e
+      internalID: -481690562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_69
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 457
+        width: 56
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cca9120892395a34f87332633a305c71
+      internalID: -1467069115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_70
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 461
+        width: 49
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4243aa6f18430174fad00a6df5391f70
+      internalID: 492691769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_71
+      rect:
+        serializedVersion: 2
+        x: 859
+        y: 463
+        width: 52
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c1919e31d5121646aacae5574e01c5d
+      internalID: 543926904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_72
+      rect:
+        serializedVersion: 2
+        x: 936
+        y: 465
+        width: 42
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fe0205a713bbd3439c89956a7927e97
+      internalID: 1435810226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_73
+      rect:
+        serializedVersion: 2
+        x: 1011
+        y: 463
+        width: 39
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3cc54f961f5e2647a8c85c65c44f751
+      internalID: -81246924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_74
+      rect:
+        serializedVersion: 2
+        x: 1075
+        y: 464
+        width: 37
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6574488d5a7855445a0aae5bdf59345c
+      internalID: 570661679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_75
+      rect:
+        serializedVersion: 2
+        x: 1338
+        y: 490
+        width: 42
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cad42e2dbcb7be64caea4cf0d073379e
+      internalID: 1888044406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_76
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 487
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b08fdcaf471cae64ea6aacaeb75a0ae6
+      internalID: 1061134118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_77
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 446
+        width: 52
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e42582363d325f438160b2ad49ef653
+      internalID: 2072695208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_78
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 396
+        width: 85
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 489cacf9752764246935e3df7fe80bad
+      internalID: -1824294358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_79
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 477
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09aa323e835206648bb45cbf2da3fca2
+      internalID: 540221666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_80
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 449
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 081179539f0fee441a2ff63057330dc9
+      internalID: -1947191999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_81
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 448
+        width: 36
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5433bc2d137a184babf30ee9cd62ffb
+      internalID: 1928836154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_82
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 419
+        width: 49
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 762e17a7fe3de4c42885552e45517104
+      internalID: 1093012058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_83
+      rect:
+        serializedVersion: 2
+        x: 1335
+        y: 419
+        width: 46
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3a8b9bdcbaa20649a251e46cee87847
+      internalID: 919060671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_84
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 425
+        width: 26
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4da635a2d309c6246b094db2c162b1b2
+      internalID: -1234284053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_85
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 434
+        width: 21
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 089ae2905f0621f4bbc8df0d7148acc9
+      internalID: 2075366741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_86
+      rect:
+        serializedVersion: 2
+        x: 946
+        y: 442
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 505307eb3d4cf0246be3cff1a928b184
+      internalID: -166489802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_87
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 434
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 004be5a8950eeb54897c798af8efe905
+      internalID: 354494198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_88
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 433
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21010366349245a44913ea4d54fbcef4
+      internalID: 1805867592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_89
+      rect:
+        serializedVersion: 2
+        x: 1083
+        y: 443
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 565d452308a767a41ad90b04131fdc55
+      internalID: 796176685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_90
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 414
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93a7cc58ea8e1fa4188e762c1a89c795
+      internalID: -639681449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_91
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 399
+        width: 25
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee9e763403daddd4391f9b0860272fbf
+      internalID: -1755788321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_92
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 397
+        width: 43
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d43f83b2b109194ca570215456dc10f
+      internalID: 900614231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_93
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 397
+        width: 35
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53166d2f4b1b30748843f0735b2b214a
+      internalID: 754619648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_94
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 414
+        width: 12
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68e12f1be50950343a3290c15566ea46
+      internalID: 1817852290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_95
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 431
+        width: 24
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1d542e20b19e7646a0ff9332f673540
+      internalID: -2022715938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_96
+      rect:
+        serializedVersion: 2
+        x: 887
+        y: 415
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaddfce6ed6a3774ca69c06a570b7098
+      internalID: 572051841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_97
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 418
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1977284ff5c56f409c4beb00638f35a
+      internalID: 1095890139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_98
+      rect:
+        serializedVersion: 2
+        x: 1046
+        y: 423
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fa77aeec8f4e864aa99a627f9a95350
+      internalID: -1035054814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_99
+      rect:
+        serializedVersion: 2
+        x: 1093
+        y: 420
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3357d74b1303977469309b98553b3340
+      internalID: -2088616883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_100
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 404
+        width: 11
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d362aae493477b04dae0b7f05b212a6b
+      internalID: -1903087076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_101
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 421
+        width: 22
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b28c134820bd198439e81806dd357c17
+      internalID: -1464893745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_102
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 418
+        width: 20
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f19810f296dae96418f00753faa966de
+      internalID: -1038832328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_103
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 399
+        width: 31
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11980cbe5ffd47948a84fc0ac54c9518
+      internalID: -366929412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_104
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 423
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a43e882a474e2654aa8c58f21c90dfcf
+      internalID: 1987579205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_105
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 415
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5acff966be265ae4cab2be36754c7b34
+      internalID: 1819692545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_106
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 415
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95d1f654abca58f4383b115ef4911b22
+      internalID: 647066047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_107
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 401
+        width: 27
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98bfea4b3b4f94b48b34c917fdc9b7e0
+      internalID: 1294041057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_108
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 399
+        width: 34
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59b5b7426cc05c544a27fa44bf2803a0
+      internalID: -433989384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_109
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 411
+        width: 6
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fbb7b891ef30434e860c7fedd63dccf
+      internalID: -1184826076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_110
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 420
+        width: 18
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32d75d4f851069849a84b1f29641d32e
+      internalID: -2075467237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_111
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 419
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26402cafbe0f69a4db3d34f76020ee12
+      internalID: -1121443994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_112
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 418
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 288615779184afc4a9a235b94e095678
+      internalID: -1768339459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_113
+      rect:
+        serializedVersion: 2
+        x: 1021
+        y: 422
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ceac4b9a05eb794c98aadd9c5d54253
+      internalID: 1725374251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_114
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 399
+        width: 25
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f8ab370ebca8b3409960503ed4e3935
+      internalID: -1958959703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_115
+      rect:
+        serializedVersion: 2
+        x: 797
+        y: 407
+        width: 26
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 519af902970500b438f954b7abdf0a05
+      internalID: -1393007883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_116
+      rect:
+        serializedVersion: 2
+        x: 1130
+        y: 417
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ece4b153c9ee8d24db7a201c826bacd7
+      internalID: 1696915323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_117
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 402
+        width: 5
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69677a939770d6b439e398d5a4a80afe
+      internalID: 2124580802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_118
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 398
+        width: 25
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11d7e6f3b1684bf4880d0d8bef501550
+      internalID: 1841379248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_119
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 404
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71e6fe66b6e33784a9673a74c3bd2861
+      internalID: -837546322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_120
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 400
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f2d5a2eeb5c9e94691beb21f3ed3710
+      internalID: 1903538529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_121
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 402
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a66b503cf58a8049aa27a95dcef3ff1
+      internalID: 818642141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_122
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 400
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c38cac8736345342b23adabb8e7420c
+      internalID: -1666045734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_123
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 404
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b22b44379e0ebd340a56024d7f348e46
+      internalID: 85586849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_124
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 270
+        width: 95
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68e1c43e24700494ca81f89dfec8af2a
+      internalID: 311452447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_125
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 271
+        width: 86
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e481eb0665048764e8f014e845998187
+      internalID: -2067918462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_126
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 272
+        width: 241
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be0b3ba9d1197014d874bcf8a5d5b2b4
+      internalID: -1056904895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_127
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 272
+        width: 82
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c88708665641d5749bf4629c8e9777dc
+      internalID: -1664394364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_128
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 272
+        width: 76
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7ee983b3fbecdf4a88ef8782861550d
+      internalID: -929697014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_129
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 309
+        width: 33
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a255b72b7fc74614f819972ca96d3445
+      internalID: -1690287140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_130
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 309
+        width: 33
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50bb6a892d398ff49932c14bdc725b8d
+      internalID: 312065499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_131
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 309
+        width: 32
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5940f820c4074224ea50839f3396cfe6
+      internalID: 42890520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_132
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 310
+        width: 64
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ce7964b8ea50f241bb8553609ec8fe2
+      internalID: 1848745077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_133
+      rect:
+        serializedVersion: 2
+        x: 943
+        y: 313
+        width: 93
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1cb483478b6c9d4e9538b907743d5ac
+      internalID: -171591697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_134
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 312
+        width: 106
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 150bda628e3219e47be01dc15fb503da
+      internalID: -1284091909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_135
+      rect:
+        serializedVersion: 2
+        x: 1174
+        y: 315
+        width: 100
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9caffeab8ea9ba44816858b35c76cd6
+      internalID: -183100006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_136
+      rect:
+        serializedVersion: 2
+        x: 1291
+        y: 312
+        width: 86
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f6ec9963e9b84b4dbe7fcf95b511387
+      internalID: -87829564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_137
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 144
+        width: 83
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0367c75123186447ab57fbecf647f74
+      internalID: 748687840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_138
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 144
+        width: 101
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3eb06725762e05f4cb1dafb25e08b5b7
+      internalID: -1073739191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_139
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 214
+        width: 105
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d828bdf9426cb54eab9162ba0f3631b
+      internalID: -274389685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_140
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 214
+        width: 129
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff4b43f32a7e3644a8e12e173e2a768f
+      internalID: -1841129784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_141
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 161
+        width: 95
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cb24e21880ba6f4f924f745cf9c790a
+      internalID: -76902473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_142
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 160
+        width: 80
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4896112cad959942a61d4e8940ebabf
+      internalID: 107191684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_143
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 182
+        width: 35
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e33a0cdf4de3dbd478ed8ea93d9b003d
+      internalID: -199291334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_144
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 182
+        width: 33
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2422e5fcc3784cb4982170ea75fd2a1f
+      internalID: -2080944468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_145
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 182
+        width: 99
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 671e336430e71c7418c3cbff3edf0453
+      internalID: 204790299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_146
+      rect:
+        serializedVersion: 2
+        x: 943
+        y: 222
+        width: 92
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dd509f570f62a041b79ae0dfb0c14a4
+      internalID: 1738905627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_147
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 222
+        width: 105
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9306f9c10cfa0e4a939a8186b84ea4d
+      internalID: -797210625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_148
+      rect:
+        serializedVersion: 2
+        x: 1174
+        y: 221
+        width: 100
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eb2a3208ee34934ea6ee65c03b0a628
+      internalID: 337347914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_149
+      rect:
+        serializedVersion: 2
+        x: 1290
+        y: 220
+        width: 90
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 706e617d8a1c16d429234cfa5e9acf86
+      internalID: 998538084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_150
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 148
+        width: 67
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9194db9fd0bbc6468b5356ad23cb448
+      internalID: 1337472496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_151
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 146
+        width: 161
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0601c2e9595f6274f91b2349f08a89e5
+      internalID: -383709159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_152
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 25
+        width: 96
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfee4cd440cde8446b9b4ab9c0526dad
+      internalID: -830857287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_153
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 125
+        width: 60
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e95968f71649a14d80cfd207da4551f
+      internalID: -1311872530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_154
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 124
+        width: 128
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7534f0e91fa34be418d34d1e8e3e291f
+      internalID: 917274335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_155
+      rect:
+        serializedVersion: 2
+        x: 943
+        y: 127
+        width: 92
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5082b877ce009bb40b36cfc12da305e4
+      internalID: 504893559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_156
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 126
+        width: 85
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5345a61dbfabc964a8313b8512739022
+      internalID: -121875703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_157
+      rect:
+        serializedVersion: 2
+        x: 1146
+        y: 123
+        width: 72
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2d5079a43381ed4c83f03966f40ced9
+      internalID: 885457564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_158
+      rect:
+        serializedVersion: 2
+        x: 1232
+        y: 123
+        width: 71
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 734c13552605d6d44b6511a0e992dbc2
+      internalID: -1413450573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_159
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 25
+        width: 82
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 422c9593e60a54b45876c63b7b547478
+      internalID: 8942780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_160
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 26
+        width: 142
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cafe64d8361d34a4c8ca7240c06290ce
+      internalID: 1561570911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_161
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 25
+        width: 110
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65c91d8e8b9c4cd46bb078ad6b00bdf3
+      internalID: 1839657102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_162
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 26
+        width: 166
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 171c11277b4084e48b90656302ee8f94
+      internalID: -374131374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_163
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 27
+        width: 76
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 594723981476d6c49ab713050c3b0237
+      internalID: 241219109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_164
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 26
+        width: 39
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3008507f978167346a050b2a55d59c84
+      internalID: -1662451147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_165
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 25
+        width: 144
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b6401ec83a2b1b4bbf0c1a84d622b7e
+      internalID: 2103743011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_166
+      rect:
+        serializedVersion: 2
+        x: 943
+        y: 26
+        width: 93
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03b830be9f80c904d853b23f59854af8
+      internalID: -1746523123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_167
+      rect:
+        serializedVersion: 2
+        x: 1051
+        y: 25
+        width: 71
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 384e956223e1f7745b605019d1c4c36f
+      internalID: -158471479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_168
+      rect:
+        serializedVersion: 2
+        x: 1139
+        y: 25
+        width: 69
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f23b2dcc01861d4e8fffa09cdf25a34
+      internalID: -449444910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea assetws_169
+      rect:
+        serializedVersion: 2
+        x: 1225
+        y: 25
+        width: 65
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd2d743d3aa23384aa7af99908879c0d
+      internalID: 2075942126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      sea assetws_0: -340612768
+      sea assetws_1: 1593649811
+      sea assetws_10: -2009134920
+      sea assetws_100: -1903087076
+      sea assetws_101: -1464893745
+      sea assetws_102: -1038832328
+      sea assetws_103: -366929412
+      sea assetws_104: 1987579205
+      sea assetws_105: 1819692545
+      sea assetws_106: 647066047
+      sea assetws_107: 1294041057
+      sea assetws_108: -433989384
+      sea assetws_109: -1184826076
+      sea assetws_11: -1888772016
+      sea assetws_110: -2075467237
+      sea assetws_111: -1121443994
+      sea assetws_112: -1768339459
+      sea assetws_113: 1725374251
+      sea assetws_114: -1958959703
+      sea assetws_115: -1393007883
+      sea assetws_116: 1696915323
+      sea assetws_117: 2124580802
+      sea assetws_118: 1841379248
+      sea assetws_119: -837546322
+      sea assetws_12: 1428008095
+      sea assetws_120: 1903538529
+      sea assetws_121: 818642141
+      sea assetws_122: -1666045734
+      sea assetws_123: 85586849
+      sea assetws_124: 311452447
+      sea assetws_125: -2067918462
+      sea assetws_126: -1056904895
+      sea assetws_127: -1664394364
+      sea assetws_128: -929697014
+      sea assetws_129: -1690287140
+      sea assetws_13: -1625523303
+      sea assetws_130: 312065499
+      sea assetws_131: 42890520
+      sea assetws_132: 1848745077
+      sea assetws_133: -171591697
+      sea assetws_134: -1284091909
+      sea assetws_135: -183100006
+      sea assetws_136: -87829564
+      sea assetws_137: 748687840
+      sea assetws_138: -1073739191
+      sea assetws_139: -274389685
+      sea assetws_14: -1817257941
+      sea assetws_140: -1841129784
+      sea assetws_141: -76902473
+      sea assetws_142: 107191684
+      sea assetws_143: -199291334
+      sea assetws_144: -2080944468
+      sea assetws_145: 204790299
+      sea assetws_146: 1738905627
+      sea assetws_147: -797210625
+      sea assetws_148: 337347914
+      sea assetws_149: 998538084
+      sea assetws_15: 960387286
+      sea assetws_150: 1337472496
+      sea assetws_151: -383709159
+      sea assetws_152: -830857287
+      sea assetws_153: -1311872530
+      sea assetws_154: 917274335
+      sea assetws_155: 504893559
+      sea assetws_156: -121875703
+      sea assetws_157: 885457564
+      sea assetws_158: -1413450573
+      sea assetws_159: 8942780
+      sea assetws_16: -1388830221
+      sea assetws_160: 1561570911
+      sea assetws_161: 1839657102
+      sea assetws_162: -374131374
+      sea assetws_163: 241219109
+      sea assetws_164: -1662451147
+      sea assetws_165: 2103743011
+      sea assetws_166: -1746523123
+      sea assetws_167: -158471479
+      sea assetws_168: -449444910
+      sea assetws_169: 2075942126
+      sea assetws_17: 1745513938
+      sea assetws_18: 2068189152
+      sea assetws_19: 761554888
+      sea assetws_2: -1683827598
+      sea assetws_20: -2060969826
+      sea assetws_21: 1182563256
+      sea assetws_22: 61606229
+      sea assetws_23: -741373001
+      sea assetws_24: 322237636
+      sea assetws_25: -1622515199
+      sea assetws_26: -1857140616
+      sea assetws_27: 1398207048
+      sea assetws_28: 2132042952
+      sea assetws_29: 678622914
+      sea assetws_3: -242585989
+      sea assetws_30: -363499902
+      sea assetws_31: -939732612
+      sea assetws_32: -169988773
+      sea assetws_33: -121588722
+      sea assetws_34: 604610882
+      sea assetws_35: -1461605711
+      sea assetws_36: -1252448962
+      sea assetws_37: 264215010
+      sea assetws_38: 765725210
+      sea assetws_39: -1137524922
+      sea assetws_4: -32332755
+      sea assetws_40: -991286531
+      sea assetws_41: -918794617
+      sea assetws_42: -1875781765
+      sea assetws_43: -1891797165
+      sea assetws_44: -1551295611
+      sea assetws_45: 1273120435
+      sea assetws_46: -998660732
+      sea assetws_47: -1020599492
+      sea assetws_48: 1917687100
+      sea assetws_49: -976735884
+      sea assetws_5: 603851406
+      sea assetws_50: 507911876
+      sea assetws_51: 1348115993
+      sea assetws_52: -1046042727
+      sea assetws_53: -1532629476
+      sea assetws_54: -2113004406
+      sea assetws_55: -551915803
+      sea assetws_56: 1256596997
+      sea assetws_57: 2081653146
+      sea assetws_58: 2465643
+      sea assetws_59: -938081041
+      sea assetws_6: -1558460875
+      sea assetws_60: 565984263
+      sea assetws_61: -2048063164
+      sea assetws_62: -600247036
+      sea assetws_63: -711008903
+      sea assetws_64: 766008590
+      sea assetws_65: 1880213124
+      sea assetws_66: -839257205
+      sea assetws_67: 107542163
+      sea assetws_68: -481690562
+      sea assetws_69: -1467069115
+      sea assetws_7: -56328438
+      sea assetws_70: 492691769
+      sea assetws_71: 543926904
+      sea assetws_72: 1435810226
+      sea assetws_73: -81246924
+      sea assetws_74: 570661679
+      sea assetws_75: 1888044406
+      sea assetws_76: 1061134118
+      sea assetws_77: 2072695208
+      sea assetws_78: -1824294358
+      sea assetws_79: 540221666
+      sea assetws_8: -2008463728
+      sea assetws_80: -1947191999
+      sea assetws_81: 1928836154
+      sea assetws_82: 1093012058
+      sea assetws_83: 919060671
+      sea assetws_84: -1234284053
+      sea assetws_85: 2075366741
+      sea assetws_86: -166489802
+      sea assetws_87: 354494198
+      sea assetws_88: 1805867592
+      sea assetws_89: 796176685
+      sea assetws_9: 1136661502
+      sea assetws_90: -639681449
+      sea assetws_91: -1755788321
+      sea assetws_92: 900614231
+      sea assetws_93: 754619648
+      sea assetws_94: 1817852290
+      sea assetws_95: -2022715938
+      sea assetws_96: 572051841
+      sea assetws_97: 1095890139
+      sea assetws_98: -1035054814
+      sea assetws_99: -2088616883
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
