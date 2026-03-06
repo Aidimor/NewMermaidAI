@@ -28,7 +28,7 @@ public class VoiceInput : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R) && !isRecording)
+        if (Input.GetKeyDown(KeyCode.Keypad0) && !isRecording)
         {
             clip = Microphone.Start(micName, false, 10, 44100);
             isRecording = true;
@@ -84,53 +84,53 @@ public class VoiceInput : MonoBehaviour
         clip = trimmedClip;
 
         Debug.Log("Audio normalizado. Enviando a Whisper...");
-        StartCoroutine(SendToLocalWhisper());
+        //StartCoroutine(SendToLocalWhisper());
     }
 
-    IEnumerator SendToLocalWhisper()
-    {
-        byte[] wavData = WavUtility.FromAudioClip(clip);
+    //IEnumerator SendToLocalWhisper()
+    //{
+    //    byte[] wavData = WavUtility.FromAudioClip(clip);
 
-        Debug.Log("Tamaño WAV: " + wavData.Length);
+    //    Debug.Log("Tamaño WAV: " + wavData.Length);
 
-        if (wavData.Length < 2000)
-        {
-            Debug.LogWarning("Audio demasiado pequeño.");
-            yield break;
-        }
+    //    if (wavData.Length < 2000)
+    //    {
+    //        Debug.LogWarning("Audio demasiado pequeño.");
+    //        yield break;
+    //    }
 
-        WWWForm form = new WWWForm();
-        form.AddBinaryData("audio", wavData, "audio.wav", "audio/wav");
+    //    WWWForm form = new WWWForm();
+    //    form.AddBinaryData("audio", wavData, "audio.wav", "audio/wav");
 
-        UnityWebRequest request =
-            UnityWebRequest.Post("http://127.0.0.1:5000/transcribe", form);
+    //    UnityWebRequest request =
+    //        UnityWebRequest.Post("http://127.0.0.1:5000/transcribe", form);
 
-        yield return request.SendWebRequest();
+    //    yield return request.SendWebRequest();
 
-        if (request.result != UnityWebRequest.Result.Success)
-        {
-            Debug.LogError("Error local Whisper: " + request.error);
-            yield break;
-        }
+    //    if (request.result != UnityWebRequest.Result.Success)
+    //    {
+    //        Debug.LogError("Error local Whisper: " + request.error);
+    //        yield break;
+    //    }
 
-        string json = request.downloadHandler.text;
-        Debug.Log("JSON recibido: " + json);
+    //    string json = request.downloadHandler.text;
+    //    Debug.Log("JSON recibido: " + json);
 
-        WhisperResponse response =
-            JsonUtility.FromJson<WhisperResponse>(json);
+    //    WhisperResponse response =
+    //        JsonUtility.FromJson<WhisperResponse>(json);
 
-        if (response != null && !string.IsNullOrEmpty(response.text))
-        {
-            recognizedText = response.text.Trim();
-            Debug.Log("Texto detectado: " + recognizedText);
+    //    if (response != null && !string.IsNullOrEmpty(response.text))
+    //    {
+    //        recognizedText = response.text.Trim();
+    //        Debug.Log("Texto detectado: " + recognizedText);
 
-            StartCoroutine(chatManager.ProcessMessage(recognizedText));
-        }
-        else
-        {
-            Debug.LogWarning("Whisper no detectó texto.");
-        }
-    }
+    //        //StartCoroutine(chatManager.ProcessMessage(recognizedText));
+    //    }
+    //    else
+    //    {
+    //        Debug.LogWarning("Whisper no detectó texto.");
+    //    }
+    //}
 
     [System.Serializable]
     public class WhisperResponse
