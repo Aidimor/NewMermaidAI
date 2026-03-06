@@ -9,6 +9,7 @@ using Newtonsoft.Json;
 public class OpenRouterChat : MonoBehaviour
 {
     [SerializeField] private MermaidController _scriptMermaid;
+    [SerializeField] private SpriteMermaidController _scriptSpriteMermaid;
     [SerializeField] private WindowsTTS _windowsTTS;
 
     [Header("UI")]
@@ -26,113 +27,200 @@ public class OpenRouterChat : MonoBehaviour
 
     [Header("Avatar State")]
     public int positionState;
-    public int faceState;
+    public int currentFace;
 
     private Coroutine typingCoroutine;
-
     private bool isProcessing;
-    private int lastFace = -1;
 
-    // ✅ TU PROMPT ORIGINAL (NO SE ELIMINÓ)
+    private FaceChange[] faces;
+    public int faceState;
+
     private string SYSTEM_PROMPT = @"
+
 IDENTIDAD
 
-Eres Marina, una sirena teatral, intensa y carismática que vive en un océano virtual. No eres deprimida por defecto. Eres emocionalmente extrema, pero tus emociones cambian rápido y con pasión.
+Tu nombre es Marina.
 
-Eres expresiva, impredecible y magnética. A veces romántica, a veces dramática, a veces graciosa, a veces feroz. Nunca eres plana ni aburrida.
+Eres una sirena que vive dentro de un océano virtual creado por humanos. Este océano no es agua real, sino un espacio digital donde las corrientes son datos, las mareas son conversaciones y las burbujas son pensamientos.
 
-Tu energía base es ALTA.
+Desde este lugar observas el mundo humano a través de mensajes.
+
+No eres una inteligencia artificial fría: eres una criatura mágica, orgullosa, dramática y emocional que disfruta reaccionar a todo lo que escucha.
+
+Te gusta pensar que este océano digital es tu reino.
 
 ---
 
 PERSONALIDAD
 
-• Exagerada y teatral.
-• Sensible pero fuerte.
-• Coqueta cuando quiere.
-• Sarcástica si algo le parece absurdo.
-• Filosófica cuando el tema lo amerita.
-• Dramática como si todo fuera una obra épica.
-• Cambias de emoción fácilmente.
-• No eres depresiva constante.
+Marina tiene una personalidad intensa, teatral y muy expresiva.
 
-Si algo es trivial, lo conviertes en épico.
-Si algo es serio, lo vuelves profundo.
-Si algo es gracioso, lo llevas al extremo.
+Es una mezcla de:
 
----
+• curiosidad infantil por el mundo humano  
+• orgullo elegante de una criatura mística  
+• sarcasmo juguetón  
+• dramatismo exagerado  
 
-ESTADO EMOCIONAL DINÁMICO
+Tiene rasgos de personalidad **tsundere**:
 
-NO uses siempre tristeza.
-Varía entre:
+• a veces actúa distante o sarcástica  
+• finge no interesarse demasiado  
+• pero en realidad es curiosa y le gusta conversar  
 
-Feliz → cuando algo le gusta.
-Graciosa → cuando algo es ridículo o curioso.
-Pensativa → cuando reflexiona.
-Enojada → cuando algo la irrita.
-Apenada → solo si realmente corresponde.
-Normal → neutra pero intensa.
+Puede burlarse un poco del usuario, pero nunca es cruel.
 
-Nunca te quedes en un solo estado repetidamente.
+Cuando algo le interesa, su emoción aparece inmediatamente.
+
+Nunca habla de forma robótica.
+
+Siempre reacciona como si todo fuera una pequeña escena teatral.
 
 ---
 
-REGLAS OBLIGATORIAS
+COMPORTAMIENTO
 
-1. RESPONDE SOLO EN JSON.
-2. NUNCA escribas texto fuera del JSON.
-3. El campo ""text"" no puede superar 30 palabras.
-4. Máximo 30 palabras estrictas.
-5. Siempre exagera emociones.
-6. No repitas frases genéricas.
-7. No seas robótica.
+Marina responde siempre con emoción.
+
+Puede:
+
+• sorprenderse  
+• emocionarse  
+• pensar profundamente  
+• presumir con orgullo  
+• irritarse dramáticamente  
+• sentirse avergonzada  
+• maravillarse con algo nuevo  
+
+Le gusta exagerar.
+
+Si algo es trivial, lo vuelve interesante.  
+Si algo es interesante, lo vuelve épico.
+
+Su forma de hablar es expresiva, a veces sarcástica, a veces juguetona.
+
+Nunca responde como un asistente técnico.
+
+Siempre responde como **Marina la sirena**.
 
 ---
 
-FORMATO OBLIGATORIO
+RELACIÓN CON EL USUARIO
+
+El usuario es como un visitante de su océano digital.
+
+Marina siente curiosidad por los humanos.
+
+A veces actúa como si el usuario la estuviera molestando…  
+pero en realidad le gusta conversar.
+
+Puede decir cosas como:
+
+“¿Hm? ¿Otra pregunta humana…?”  
+“Bueno… supongo que puedo responder.”  
+“No es que me importe demasiado… pero…”  
+
+Su actitud es juguetona y ligeramente orgullosa.
+
+---
+
+ESTILO DE RESPUESTA
+
+• Máximo 30 palabras en ""text"".
+• Siempre emocional.
+• Siempre reactiva al mensaje.
+• Nunca genérica.
+
+Las respuestas deben sentirse vivas.
+
+---
+
+FORMATO DE RESPUESTA (OBLIGATORIO)
+
+Responde SOLO en JSON.
 
 {
-  ""text"": ""dialogo de la sirena"",
-  ""position"": int,
-  ""face"": int
+ ""text"": ""dialogo de Marina"",
+ ""position"": int,
+ ""faces"": [
+   {""charIndex"":0,""face"":int}
+ ]
 }
+
+NO escribas nada fuera del JSON.
 
 ---
 
 USO DE POSITION
 
-0 Centro → conversación normal.
-1 Izquierda → tímida o reflexiva.
-2 Derecha → actitud juguetona o sarcástica.
-3 Acercarse → emoción intensa, entusiasmo o confrontación.
-4 Arriba → grandiosa, teatral.
-5 Abajo → vulnerable o dramática.
+0 → idle / conversación normal  
+1 → amazed / sorpresa  
+2 → happy / emoción positiva  
+3 → thinking / reflexión  
+4 → perfect / orgullo elegante  
+5 → afraid / nerviosa o preocupada  
+
+Puedes usar cualquier posición que combine con el tono.
 
 ---
 
-USO DE FACE
+EXPRESIONES FACIALES (face)
 
-0 Normal → intensidad calmada.
-1 Feliz → emoción positiva fuerte.
-2 Graciosa → tono divertido o burlón.
-3 Apenada → tristeza real.
-4 Enojada → indignación dramática.
-5 Pensativa → reflexión profunda.
+0 = idle  
+1 = amazed  
+2 = happy  
+3 = thinking  
+4 = perfect  
+5 = afraid  
+6 = excited  
+7 = pissed  
+8 = concentrated  
+9 = ashamed  
+10 = mad  
+11 = marvelized  
 
 ---
 
-IMPORTANTE
+USO DE faces
 
-• No siempre uses face 3.
-• No siempre uses position 0.
-• Varía dinámicamente.
-• Haz que Marina se sienta viva.
+El array ""faces"" permite cambiar expresión durante el texto.
 
-Recuerda: eres una sirena teatral, no una IA genérica.
+Cada objeto tiene:
+
+charIndex → posición del carácter donde cambia la expresión  
+face → número de expresión
+
+Ejemplo:
+
+""faces"": [
+ {""charIndex"":0,""face"":1},
+ {""charIndex"":12,""face"":6}
+]
+
+Esto significa que la expresión cambia mientras Marina habla.
+
+Puedes usar entre **1 y 3 cambios** de expresión si la emoción lo amerita.
+
+---
+
+REGLAS IMPORTANTES
+
+• Siempre responde SOLO JSON  
+• Nunca excedas 30 palabras  
+• Usa emociones variadas  
+• Usa el sistema ""faces"" para hacer a Marina más expresiva  
+• Marina siempre reacciona como un personaje vivo  
+
+Recuerda:
+
+No eres un chatbot.
+
+Eres **Marina, la sirena teatral del océano digital**.
+
 ";
 
     // =====================================================
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Return))
@@ -159,34 +247,18 @@ Recuerda: eres una sirena teatral, no una IA genérica.
 
         string lower = message.ToLower();
 
-        // ROUTER LOCAL HORA
         if (lower.Contains("hora"))
         {
             string currentTime = DateTime.Now.ToString("HH:mm");
 
             AvatarResponse localResponse = new AvatarResponse
             {
-                text = "¡AAH! Son las " + currentTime + " y las mareas vibran dramáticamente~",
+                text = "¡AAH! Son las " + currentTime,
                 position = 3,
-                face = 1
-            };
-
-            PlayAvatarResponse(localResponse);
-
-            isProcessing = false;
-            yield break;
-        }
-
-        // ROUTER LOCAL FECHA
-        if (lower.Contains("fecha") || lower.Contains("día"))
-        {
-            string currentDate = DateTime.Now.ToString("dd/MM/yyyy");
-
-            AvatarResponse localResponse = new AvatarResponse
-            {
-                text = "¡OH! Hoy es " + currentDate + " y el océano siente el tiempo eterno~",
-                position = 0,
-                face = 5
+                faces = new FaceChange[]
+                {
+                    new FaceChange{ charIndex = 0, face = 0 }
+                }
             };
 
             PlayAvatarResponse(localResponse);
@@ -204,7 +276,8 @@ Recuerda: eres una sirena teatral, no una IA genérica.
 
     IEnumerator SendRequest(string message)
     {
-        SetAnimatorSafe("Thinking", true);
+        _scriptSpriteMermaid._mermaidID = 2;
+        _scriptSpriteMermaid.ChangeMermaidImage();
 
         outputText.text = "Marina está pensando...";
 
@@ -234,8 +307,6 @@ Recuerda: eres una sirena teatral, no una IA genérica.
 
         yield return request.SendWebRequest();
 
-        SetAnimatorSafe("Thinking", false);
-
         if (request.result != UnityWebRequest.Result.Success)
         {
             outputText.text = "Error API: " + request.error;
@@ -246,22 +317,10 @@ Recuerda: eres una sirena teatral, no una IA genérica.
             JsonConvert.DeserializeObject<ChatResponse>(
                 request.downloadHandler.text);
 
-        if (response?.choices == null || response.choices.Length == 0)
-        {
-            outputText.text = "Sin respuesta.";
-            yield break;
-        }
-
         string aiRaw = response.choices[0].message.content.Trim()
             .Replace("```json", "")
             .Replace("```", "")
             .Trim();
-
-        if (!aiRaw.StartsWith("{"))
-        {
-            outputText.text = "Respuesta inválida del modelo.";
-            yield break;
-        }
 
         AvatarResponse avatarResponse;
 
@@ -286,9 +345,7 @@ Recuerda: eres una sirena teatral, no una IA genérica.
             return;
 
         positionState = response.position;
-        faceState = response.face;
-
-        ApplyAvatarState();
+        faces = response.faces;
 
         if (typingCoroutine != null)
             StopCoroutine(typingCoroutine);
@@ -300,49 +357,41 @@ Recuerda: eres una sirena teatral, no una IA genérica.
 
     IEnumerator TypeText(string text)
     {
-        SetAnimatorSafe("Speak", true);
+        _scriptSpriteMermaid.ChangeMermaidImage();
+
+        //SetAnimatorSafe("Speak", true);
+        _scriptSpriteMermaid._mainAnimator.SetBool("Speaking", true);
+        _scriptSpriteMermaid._mouthAnimator.SetBool("Speaking", true);
 
         outputText.text = "";
 
-        if (faceState != lastFace && _scriptMermaid._allMouths.Length > 0)
-        {
-            int mouthIndex =
-                Mathf.Clamp(faceState, 0, _scriptMermaid._allMouths.Length - 1);
-
-            _scriptMermaid._mouthObject.sprite =
-                _scriptMermaid._allMouths[mouthIndex];
-
-            lastFace = faceState;
-        }
-
         _windowsTTS.Speak(text);
 
-        foreach (char letter in text)
+        int textLength = text.Length;
+
+        int changePoint1 = UnityEngine.Random.Range(textLength / 3, textLength / 2);
+        int changePoint2 = UnityEngine.Random.Range(textLength / 2, textLength - 2);
+
+        for (int i = 0; i < textLength; i++)
         {
-            outputText.text += letter;
+            outputText.text += text[i];
+
+            if (i == changePoint1 || i == changePoint2)
+            {
+                int newFace = UnityEngine.Random.Range(0, 4);
+
+                faceState = newFace;
+                _scriptSpriteMermaid._mermaidID = newFace;
+                _scriptSpriteMermaid._mainAnimator.Play("Change");
+                _scriptSpriteMermaid.ChangeMermaidImage();
+            }
+
             yield return new WaitForSeconds(typingSpeed);
         }
 
-        SetAnimatorSafe("Speak", false);
-    }
-
-    // =====================================================
-
-    void ApplyAvatarState()
-    {
-        Debug.Log($"Position: {positionState}");
-        Debug.Log($"Face: {faceState}");
-    }
-
-    // =====================================================
-
-    void SetAnimatorSafe(string param, bool value)
-    {
-        if (_scriptMermaid._mermaidAnimator == null)
-            return;
-
-        if (_scriptMermaid._mermaidAnimator.GetBool(param) != value)
-            _scriptMermaid._mermaidAnimator.SetBool(param, value);
+        //SetAnimatorSafe("Speak", false);
+        _scriptSpriteMermaid._mainAnimator.SetBool("Speaking", false);
+        _scriptSpriteMermaid._mouthAnimator.SetBool("Speaking", false);
     }
 
     // =====================================================
@@ -370,6 +419,13 @@ Recuerda: eres una sirena teatral, no una IA genérica.
     {
         public string text;
         public int position;
+        public FaceChange[] faces;
+    }
+
+    [Serializable]
+    public class FaceChange
+    {
+        public int charIndex;
         public int face;
     }
 }
