@@ -25,6 +25,15 @@ public class SpriteMermaidController : MonoBehaviour
     public Animator _mainAnimator;
     public Animator _mouthAnimator;
 
+    [System.Serializable]
+    public class MapAssets
+    {
+        public GameObject Parent;
+        public Image[] _positions;
+    }
+    public MapAssets _mapAssets;
+    public ParticleSystem _bubbleParticle;
+
     void Start()
     {
         ChangeMermaidImage();

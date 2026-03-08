@@ -354,6 +354,9 @@ Sus expresiones faciales deben coincidir con lo que dice en el diálogo.
 
         _scriptSpriteMermaid._mainAnimator.SetBool("Speaking", false);
         _scriptSpriteMermaid._mouthAnimator.SetBool("Speaking", false);
+        yield return new WaitForSeconds(0.5f);
+        faceState = 0;
+        _scriptSpriteMermaid.ChangeMermaidImage();
     }
 
     [Serializable]
