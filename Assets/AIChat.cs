@@ -34,6 +34,7 @@ public class OpenRouterChat : MonoBehaviour
     private bool isProcessing;
 
     private FaceChange[] faces;
+    public bool _onGame;
 
     private string SYSTEM_PROMPT = @"
 Eres Marina, una joven sirena de estilo anime que vive dentro de un pequeño océano digital.
