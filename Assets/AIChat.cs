@@ -34,7 +34,9 @@ public class OpenRouterChat : MonoBehaviour
     private bool isProcessing;
 
     private FaceChange[] faces;
+
     public bool _onGame;
+    private bool _pendingGame;
 
     private string SYSTEM_PROMPT = @"
 Eres Marina, una joven sirena de estilo anime que vive dentro de un pequeño océano digital.
@@ -74,7 +76,7 @@ COMPORTAMIENTO
 - Sus expresiones faciales cambian mientras habla.
 - Nunca dice que es una IA.
 - Siempre habla como Marina la sirena.
- -El limite de palabras por respuesta es de 20 palabras.
+- El limite de palabras por respuesta es de 20 palabras.
 
 FORMATO DE RESPUESTA
 
@@ -85,6 +87,7 @@ Formato exacto:
 {
  ""text"": ""dialogo"",
  ""position"": 0,
+ ""game"": false,
  ""faces"": [
    {""charIndex"":0,""face"":0}
  ]
@@ -97,57 +100,62 @@ REGLAS IMPORTANTES
 - ""text"" es el diálogo de Marina.
 - ""position"" es un número entero para su postura.
 - ""faces"" define cambios de expresión durante el texto.
+- ""game"" indica si se debe iniciar un minijuego.
 - Todo debe ser escrito en mayusculas y sin acentos.
 
-charIndex indica el punto del texto donde cambia la expresión.
+REGLA DEL MINIJUEGO
 
-EXPRESIONES DISPONIBLES
+Flujo obligatorio:
 
-0 idle → neutral  
-1 amazed → sorprendida  
-2 happy → feliz  
-3 thinking → pensativa  
-4 perfect → confiada o orgullosa  
-5 afraid → asustada  
-6 excited → muy emocionada  
-7 pissed → irritada  
-8 concentrated → concentrada  
-9 ashamed → avergonzada  
-10 mad → muy enojada  
-11 marvelized → maravillada o fascinada  
+1. Marina propone jugar primero.
+Ejemplo:
+HUMANO... ¿QUIERES JUGAR CONMIGO?
 
-REGLA DE EXPRESIONES
+2. El humano responde si acepta o no.
 
-Debes cambiar expresiones en ""faces"" dependiendo de lo que Marina siente mientras habla.
+3. Si el humano acepta, Marina responde con una FRASE DE ACCION para iniciar el juego.
 
-Ejemplos:
+Ejemplos de frases correctas:
+PERFECTO... PREPARATE HUMANO
+BIEN... EMPECEMOS
+VEN... SIGUEME
+MUY BIEN... COMENCEMOS
 
-Si algo la sorprende → amazed  
-Si algo le gusta → happy  
-Si piensa en algo → thinking  
-Si presume algo → perfect  
-Si algo la emociona → excited  
-Si algo la irrita → pissed o mad  
-Si se avergüenza → ashamed  
-
-Puedes usar 1, 2 o 3 cambios de expresión dentro del mismo diálogo.
-
-Ejemplo válido:
-
-{
- ""text"": ""¿Q-qué dijiste? ¡Eso fue inesperado!... pero admito que fue interesante..."",
- ""position"": 0,
- ""faces"": [
-   {""charIndex"":0,""face"":1},
-   {""charIndex"":12,""face"":3},
-   {""charIndex"":45,""face"":2}
- ]
-}
+4. SOLO en este paso usar ""game"": true.
 
 IMPORTANTE
 
-Marina siempre es expresiva, dramática y emocional.  
-Sus expresiones faciales deben coincidir con lo que dice en el diálogo.
+- Marina NUNCA debe volver a preguntar si el humano quiere jugar despues de que el humano diga que SI.
+- Si el humano acepta, Marina debe responder con una declaracion para iniciar el juego.
+- Las frases deben ser declaraciones, NO preguntas.
+
+ACEPTACION DEL HUMANO
+
+Si el humano dice cualquiera de estas cosas significa que acepta jugar:
+
+SI
+CLARO
+OK
+VALE
+VAMOS
+QUIERO JUGAR
+DALE
+ACEPTO
+
+EXPRESIONES DISPONIBLES
+
+0 idle  
+1 amazed  
+2 happy  
+3 thinking  
+4 perfect  
+5 afraid  
+6 excited  
+7 pissed  
+8 concentrated  
+9 ashamed  
+10 mad  
+11 marvelized  
 ";
 
     void Update()
@@ -182,6 +190,7 @@ Sus expresiones faciales deben coincidir con lo que dice en el diálogo.
             {
                 text = "Hmm… son las " + currentTime,
                 position = 0,
+                game = false,
                 faces = new FaceChange[]
                 {
                     new FaceChange{ charIndex = 0, face = 3 }
@@ -204,6 +213,7 @@ Sus expresiones faciales deben coincidir con lo que dice en el diálogo.
         outputText.text = "Marina está pensando...";
         faceState = 3;
         _scriptSpriteMermaid.ChangeMermaidImage();
+
         var requestData = new
         {
             model = modelName,
@@ -227,8 +237,6 @@ Sus expresiones faciales deben coincidir con lo que dice en el diálogo.
 
         request.SetRequestHeader("Authorization", "Bearer " + apiKey);
         request.SetRequestHeader("Content-Type", "application/json");
-
-        // HEADERS RECOMENDADOS POR OPENROUTER
         request.SetRequestHeader("HTTP-Referer", "http://localhost");
         request.SetRequestHeader("X-Title", "MarinaAI");
 
@@ -244,52 +252,13 @@ Sus expresiones faciales deben coincidir con lo que dice en el diálogo.
 
         string rawResponse = request.downloadHandler.text;
 
-        ChatResponse response = null;
-
-        try
-        {
-            response = JsonConvert.DeserializeObject<ChatResponse>(rawResponse);
-        }
-        catch
-        {
-            Debug.LogError("Error parsing OpenRouter response");
-            Debug.LogError(rawResponse);
-            outputText.text = "Error API response.";
-            yield break;
-        }
-
-        if (response == null || response.choices == null || response.choices.Length == 0)
-        {
-            outputText.text = "Respuesta inválida";
-            yield break;
-        }
+        ChatResponse response = JsonConvert.DeserializeObject<ChatResponse>(rawResponse);
 
         string aiRaw = response.choices[0].message.content;
 
-        if (string.IsNullOrEmpty(aiRaw))
-        {
-            outputText.text = "Respuesta vacía.";
-            yield break;
-        }
+        aiRaw = aiRaw.Replace("```json", "").Replace("```", "").Trim();
 
-        aiRaw = aiRaw
-            .Replace("```json", "")
-            .Replace("```", "")
-            .Trim();
-
-        AvatarResponse avatarResponse = null;
-
-        try
-        {
-            avatarResponse = JsonConvert.DeserializeObject<AvatarResponse>(aiRaw);
-        }
-        catch
-        {
-            Debug.LogError("JSON ERROR:");
-            Debug.LogError(aiRaw);
-            outputText.text = "Error leyendo respuesta.";
-            yield break;
-        }
+        AvatarResponse avatarResponse = JsonConvert.DeserializeObject<AvatarResponse>(aiRaw);
 
         PlayAvatarResponse(avatarResponse);
     }
@@ -300,6 +269,11 @@ Sus expresiones faciales deben coincidir con lo que dice en el diálogo.
             return;
 
         positionState = response.position;
+
+        if (response.game)
+        {
+            _pendingGame = true;
+        }
 
         faces = response.faces;
 
@@ -324,9 +298,8 @@ Sus expresiones faciales deben coincidir con lo que dice en el diálogo.
 
         outputText.text = "";
 
-        // Determina la emoción inicial de la voz usando la primera expresión
         int initialFace = faces != null && faces.Length > 0 ? faces[0].face : 0;
-        _azureTTS.Speak(text, initialFace); // ¡Llamamos solo una vez!
+        _azureTTS.Speak(text, initialFace);
 
         int faceIndex = 0;
 
@@ -350,14 +323,21 @@ Sus expresiones faciales deben coincidir con lo que dice en el diálogo.
             yield return new WaitForSeconds(typingSpeed);
         }
 
-        // Espera a que termine de hablar
         yield return new WaitWhile(() => _azureTTS.GetComponent<AudioSource>().isPlaying);
 
         _scriptSpriteMermaid._mainAnimator.SetBool("Speaking", false);
         _scriptSpriteMermaid._mouthAnimator.SetBool("Speaking", false);
+
         yield return new WaitForSeconds(0.5f);
+
         faceState = 0;
         _scriptSpriteMermaid.ChangeMermaidImage();
+
+        if (_pendingGame)
+        {
+            _onGame = true;
+            _pendingGame = false;
+        }
     }
 
     [Serializable]
@@ -383,6 +363,7 @@ Sus expresiones faciales deben coincidir con lo que dice en el diálogo.
     {
         public string text;
         public int position;
+        public bool game;
         public FaceChange[] faces;
     }
 
@@ -391,5 +372,10 @@ Sus expresiones faciales deben coincidir con lo que dice en el diálogo.
     {
         public int charIndex;
         public int face;
+    }
+
+    public void SendSystemMessage(string message)
+    {
+        StartCoroutine(ProcessMessage(message));
     }
 }

@@ -24,6 +24,7 @@ public class SpriteMermaidController : MonoBehaviour
     public Image _mainSprite;
     public Animator _mainAnimator;
     public Animator _mouthAnimator;
+    public GameObject _subMain;
 
     [System.Serializable]
     public class MapAssets
@@ -34,6 +35,15 @@ public class SpriteMermaidController : MonoBehaviour
     public MapAssets _mapAssets;
     public ParticleSystem _bubbleParticle;
 
+    [System.Serializable]
+    public class MermaidPositions
+    {
+        public Vector2 _position;
+        public Vector2 _scale;
+    }
+    public MermaidPositions[] _mermaidPositions;
+    public int _idPos;
+
     void Start()
     {
         ChangeMermaidImage();
@@ -43,6 +53,7 @@ public class SpriteMermaidController : MonoBehaviour
     void Update()
     {
         //HandleBlink();
+        PosScaleMermaidVoid();
     }
 
     void HandleBlink()
@@ -79,5 +90,11 @@ public class SpriteMermaidController : MonoBehaviour
 
         _mermaidSpriteAssets[_mermaidID]._openMouth.gameObject.SetActive(true);
         _mermaidSpriteAssets[_mermaidID]._closedMouth.gameObject.SetActive(true);
+    }
+
+    public void PosScaleMermaidVoid()
+    {
+        _mainAnimator.GetComponent<RectTransform>().anchoredPosition = Vector2.Lerp(_mainAnimator.GetComponent<RectTransform>().anchoredPosition, _mermaidPositions[_idPos]._position, 2 * Time.deltaTime);
+        _subMain.GetComponent<RectTransform>().localScale = Vector2.Lerp(_subMain.GetComponent<RectTransform>().localScale, _mermaidPositions[_idPos]._scale, 2 * Time.deltaTime);
     }
 }

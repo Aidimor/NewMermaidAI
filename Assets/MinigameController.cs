@@ -25,6 +25,7 @@ public class MinigameController : MonoBehaviour
         public bool _pressed;
         public float _playerSpeed;
         public TextMeshProUGUI _quantityText;
+        public Image _startImage;
     }
 
     public GameAssets _gameAssets;
@@ -196,12 +197,58 @@ public class MinigameController : MonoBehaviour
 
     public IEnumerator GameStartsNumerator()
     {
+        _totalCatched = 0;
         _aiChat._onGame = false;
         _scriptMermaid._bubbleParticle.Play();
         yield return new WaitForSeconds(0.75f);
-        _scriptMermaid._mainAnimator.gameObject.SetActive(false);
+        _scriptMermaid._idPos = 1;
+        //_scriptMermaid._mainAnimator.gameObject.SetActive(false);
         _aiChat.inputField.gameObject.SetActive(false);
         _parent.SetActive(true);
+        yield return new WaitForSeconds(1);
+        _gameAssets._startImage.gameObject.SetActive(true);
+        yield return new WaitForSeconds(1);
+        _gameAssets._startImage.gameObject.SetActive(false);
+        _minigameOn = true;
+    }
+
+    public void GameEndsVoid()
+    {
+        StartCoroutine(GameEndsNunmerator());
+    }
+
+    public IEnumerator GameEndsNunmerator()
+    {
+        _minigameOn = false;
+
+        for (int i = 0; i < _objectsPool._allPrefabs.Count; i++)
+        {
+            _objectsPool._allPrefabs[i].gameObject.SetActive(false);
+        }
+
+        _scriptMermaid._bubbleParticle.Play();
+        yield return new WaitForSeconds(0.75f);
+
+        _scriptMermaid._idPos = 0;
+        _scriptMermaid._mainAnimator.gameObject.SetActive(true);
+        _aiChat.inputField.gameObject.SetActive(true);
+        _parent.SetActive(false);
+
+        // CALCULAR RESULTADO
+        string result;
+
+        if (_totalCatched < 5)
+            result = "JUGO MUY MAL";
+        else if (_totalCatched < 15)
+            result = "JUGO NORMAL";
+        else
+            result = "JUGO MUY BIEN";
+
+        // MENSAJE PARA LA IA
+        string resultMessage = "EL JUEGO TERMINO. EL HUMANO ATRAPO " + _totalCatched + " OBJETOS. " + result + ". REACCIONA.";
+
+        // ENVIAR A MARINA
+        _aiChat.SendSystemMessage(resultMessage);
     }
 
 }

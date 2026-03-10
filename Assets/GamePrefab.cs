@@ -19,6 +19,7 @@ public class GamePrefab : MonoBehaviour
         if (GetComponent<RectTransform>().anchoredPosition.y <= -1000f)
         {
             ResetPrefab();
+            MinigameController.instance.GameEndsVoid();
         }
     }
 
