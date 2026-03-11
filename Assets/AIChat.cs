@@ -30,6 +30,9 @@ public class OpenRouterChat : MonoBehaviour
     public int positionState;
     public int faceState;
 
+    public int _onStone;
+    public int onPlace;
+
     private Coroutine typingCoroutine;
     private bool isProcessing;
 
@@ -158,6 +161,19 @@ EXPRESIONES DISPONIBLES
 11 marvelized  
 ";
 
+    string GetPlaceContext()
+    {
+        switch (onPlace)
+        {
+            case 0: return "CONTEXTO DEL MUNDO: EL HUMANO ESTA EN LA ENTRADA.";
+            case 1: return "CONTEXTO DEL MUNDO: EL HUMANO ESTA EN LA SALA DE SIRENAS.";
+            case 2: return "CONTEXTO DEL MUNDO: EL HUMANO ESTA EN LA SALA DE MEDUSAS.";
+            case 3: return "CONTEXTO DEL MUNDO: EL HUMANO ESTA EN EL PASILLO.";
+            case 4: return "CONTEXTO DEL MUNDO: EL HUMANO ESTA EN LA SALA DE ARBOLES.";
+            default: return "CONTEXTO DEL MUNDO: EL HUMANO ESTA EN UN LUGAR DESCONOCIDO.";
+        }
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Return))
@@ -180,9 +196,9 @@ EXPRESIONES DISPONIBLES
     {
         isProcessing = true;
 
-        string lower = message.ToLower();
+        string lower = message.ToLower().Trim();
 
-        if (lower.Contains("hora"))
+        if (lower == "hora" || lower == "que hora es" || lower == "qué hora es")
         {
             string currentTime = DateTime.Now.ToString("HH:mm");
 
@@ -222,6 +238,7 @@ EXPRESIONES DISPONIBLES
             messages = new[]
             {
                 new { role = "system", content = SYSTEM_PROMPT },
+                new { role = "system", content = GetPlaceContext() },
                 new { role = "user", content = message }
             }
         };
