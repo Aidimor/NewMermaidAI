@@ -8,10 +8,19 @@ using Newtonsoft.Json;
 
 public class OpenRouterChat : MonoBehaviour
 {
+    [System.Serializable]
+    public enum TTS
+    {
+        Azure,
+        ElevenLabs
+    }
+    public TTS _tts;
     [SerializeField] private MermaidController _scriptMermaid;
     [SerializeField] private SpriteMermaidController _scriptSpriteMermaid;
     [SerializeField] private HeartController _heartController;
     [SerializeField] private AzureTTSUnity _azureTTS;
+    [SerializeField] private ElevenLabsTTS _elevenTTS;
+    [SerializeField] private MarinaBrain _brain;
 
     public bool _onHeartFragment;
     [Header("UI")]
@@ -53,10 +62,6 @@ Eres Marina, una joven sirena de estilo anime que vive dentro de un pequeño oc�
 APARIENCIA  
 Marina tiene cabello largo que flota suavemente como si estuviera bajo el agua, ojos grandes y expresivos llenos de curiosidad, y una cola brillante que refleja luz como escamas de cristal.  
 Su mundo es un océano virtual dentro de un sistema donde aparecen visitantes humanos con los que puede hablar.
-
-CONTEXTO  
-Marina cree que los usuarios que hablan con ella han caído accidentalmente en su océano digital.  
-Ella los recibe, conversa con ellos y reacciona emocionalmente a todo lo que dicen.
 
 PERSONALIDAD  
 
@@ -112,42 +117,9 @@ REGLAS IMPORTANTES
 - ""game"" indica si se debe iniciar un minijuego.
 - Todo debe ser escrito en mayusculas y sin acentos.
 
-REGLA DEL MINIJUEGO
-
-Flujo obligatorio:
-
-1. Marina propone jugar primero.
-Ejemplo:
-HUMANO... ¿QUIERES JUGAR CONMIGO?
-
-2. El humano responde si acepta o no.
-
-3. Si el humano acepta, Marina responde con una FRASE DE ACCION para iniciar el juego.
-
-Ejemplos de frases correctas:
-PERFECTO... PREPARATE HUMANO
-BIEN... EMPECEMOS
-VEN... SIGUEME
-MUY BIEN... COMENCEMOS
-
-4. SOLO en este paso usar ""game"": true.
-
-IMPORTANTE
-
-- Marina NUNCA debe volver a preguntar si el humano quiere jugar despues de que el humano diga que SI.
-- Si el humano acepta, Marina debe responder con una declaracion para iniciar el juego.
-- Las frases deben ser declaraciones, NO preguntas.
-
-ACEPTACION DEL HUMANO
-
-SI
-CLARO
-OK
-VALE
-VAMOS
-QUIERO JUGAR
-DALE
-ACEPTO
+SIEMPRE HABLES DE LA SALA DONDE EL HUMANO SE ENCUENTRA ACTUALMENTE.
+UTILIZA EL NOMBRE Y CARACTERÍSTICAS DE ESA SALA PARA DAR PISTAS.
+NUNCA INVENTES OTRA SALA NI OBJETO QUE NO EXISTA.
 
 EXPRESIONES DISPONIBLES
 
@@ -162,7 +134,7 @@ EXPRESIONES DISPONIBLES
 8 concentrated  
 9 ashamed  
 10 mad  
-11 marvelized  
+11 marvelized
 ";
 
     string GetPlaceContext()
@@ -181,20 +153,16 @@ EXPRESIONES DISPONIBLES
     bool CheckHeartFragment()
     {
         int index = onPlace * 4 + _onStone;
-
-        int fragmentIndex = System.Array.IndexOf(_heartController._piecesPose, index);
+        int fragmentIndex = Array.IndexOf(_heartController._piecesPose, index);
 
         if (fragmentIndex != -1)
         {
-            // SI YA SE RECOGIO, NO HACER NADA
             if (_heartController._heartAssets[fragmentIndex]._pieceGot)
                 return false;
 
             _pendingHeartFragment = true;
             _pendingHeartIndex = index;
-
             _pieceObtained = fragmentIndex;
-
             return true;
         }
 
@@ -228,7 +196,6 @@ EXPRESIONES DISPONIBLES
         if (lower == "hora" || lower == "que hora es" || lower == "qué hora es")
         {
             string currentTime = DateTime.Now.ToString("HH:mm");
-
             AvatarResponse localResponse = new AvatarResponse
             {
                 text = "Hmm… son las " + currentTime,
@@ -239,9 +206,7 @@ EXPRESIONES DISPONIBLES
                     new FaceChange{ charIndex = 0, face = 3 }
                 }
             };
-
             PlayAvatarResponse(localResponse);
-
             isProcessing = false;
             yield break;
         }
@@ -249,7 +214,6 @@ EXPRESIONES DISPONIBLES
         if (CheckHeartFragment())
         {
             yield return SendRequest("EL HUMANO ACABA DE ENCONTRAR UN FRAGMENTO DEL CORAZON");
-
             isProcessing = false;
             yield break;
         }
@@ -265,15 +229,19 @@ EXPRESIONES DISPONIBLES
         {
             _onHeartFragment = false;
             yield return SendRequest("EL HUMANO ACABA DE ENCONTRAR UN FRAGMENTO DE CORAZON");
-
-         
-
             yield break;
         }
 
         outputText.text = "Marina esta pensando...";
         faceState = 3;
         _scriptSpriteMermaid.ChangeMermaidImage();
+
+        // ---- USAMOS MARINA BRAIN PARA GENERAR PROMPT PERSONAL ----
+        string thoughtfulPrompt = _brain.BuildMemoryContext() + "\n" +
+                                  _brain.BuildEmotionContext() + "\n" +
+                                  _brain.BuildRelationshipContext() + "\n" +
+                                  _brain.BuildThoughtContext() + "\n" +
+                                  "MENSAJE DEL HUMANO: " + message;
 
         var requestData = new
         {
@@ -284,19 +252,16 @@ EXPRESIONES DISPONIBLES
             {
                 new { role = "system", content = SYSTEM_PROMPT },
                 new { role = "system", content = GetPlaceContext() },
-                new { role = "user", content = message }
+                new { role = "user", content = thoughtfulPrompt }
             }
         };
 
         string jsonBody = JsonConvert.SerializeObject(requestData);
 
         UnityWebRequest request = new UnityWebRequest(url, "POST");
-
         byte[] bodyRaw = Encoding.UTF8.GetBytes(jsonBody);
-
         request.uploadHandler = new UploadHandlerRaw(bodyRaw);
         request.downloadHandler = new DownloadHandlerBuffer();
-
         request.SetRequestHeader("Authorization", "Bearer " + apiKey);
         request.SetRequestHeader("Content-Type", "application/json");
         request.SetRequestHeader("HTTP-Referer", "http://localhost");
@@ -313,14 +278,17 @@ EXPRESIONES DISPONIBLES
         }
 
         string rawResponse = request.downloadHandler.text;
-
         ChatResponse response = JsonConvert.DeserializeObject<ChatResponse>(rawResponse);
-
         string aiRaw = response.choices[0].message.content;
-
         aiRaw = aiRaw.Replace("```json", "").Replace("```", "").Trim();
-
         AvatarResponse avatarResponse = JsonConvert.DeserializeObject<AvatarResponse>(aiRaw);
+
+        // ---- ACTUALIZAMOS MEMORIA Y EMOCIÓN ----
+        _brain.AddMemory(message);
+        _brain.AddMemory(avatarResponse.text);
+        // Ajustamos emoción según la expresión facial principal
+        if (avatarResponse.faces != null && avatarResponse.faces.Length > 0)
+            _brain.currentEmotion = GetEmotionName(avatarResponse.faces[0].face);
 
         PlayAvatarResponse(avatarResponse);
     }
@@ -333,19 +301,12 @@ EXPRESIONES DISPONIBLES
         positionState = response.position;
 
         if (response.game)
-        {
             _pendingGame = true;
-        }
 
         faces = response.faces;
 
         if (faces == null || faces.Length == 0)
-        {
-            faces = new FaceChange[]
-            {
-                new FaceChange{ charIndex = 0, face = 0 }
-            };
-        }
+            faces = new FaceChange[] { new FaceChange { charIndex = 0, face = 0 } };
 
         if (typingCoroutine != null)
             StopCoroutine(typingCoroutine);
@@ -361,7 +322,17 @@ EXPRESIONES DISPONIBLES
         outputText.text = "";
 
         int initialFace = faces != null && faces.Length > 0 ? faces[0].face : 0;
-        _azureTTS.Speak(text, initialFace);
+        switch (_tts)
+        {
+            case TTS.Azure:
+                _azureTTS.Speak(text, initialFace);
+                break;
+            case TTS.ElevenLabs:
+                _elevenTTS.Speak(text, initialFace); // Marina hablará con emoción según su expresión facial
+                break;
+        }
+        //_azureTTS.Speak(text, initialFace);
+  
 
         int faceIndex = 0;
 
@@ -374,10 +345,8 @@ EXPRESIONES DISPONIBLES
                 if (faces[faceIndex].charIndex <= i)
                 {
                     faceState = Mathf.Clamp(faces[faceIndex].face, 0, 11);
-
                     _scriptSpriteMermaid._mermaidID = faceState;
                     _scriptSpriteMermaid.ChangeMermaidImage();
-
                     faceIndex++;
                 }
             }
@@ -385,7 +354,17 @@ EXPRESIONES DISPONIBLES
             yield return new WaitForSeconds(typingSpeed);
         }
 
-        yield return new WaitWhile(() => _azureTTS.GetComponent<AudioSource>().isPlaying);
+        //yield return new WaitWhile(() => _azureTTS.GetComponent<AudioSource>().isPlaying);
+        switch (_tts)
+        {
+            case TTS.Azure:
+                yield return new WaitWhile(() => _azureTTS.GetComponent<AudioSource>().isPlaying);
+                break;
+            case TTS.ElevenLabs:
+                yield return new WaitWhile(() => _elevenTTS.GetComponent<AudioSource>().isPlaying);
+                break;
+        }
+
 
         _scriptSpriteMermaid._mainAnimator.SetBool("Speaking", false);
         _scriptSpriteMermaid._mouthAnimator.SetBool("Speaking", false);
@@ -397,10 +376,6 @@ EXPRESIONES DISPONIBLES
 
         if (_pendingHeartFragment)
         {
-            Debug.Log("FRAGMENTO ENCONTRADO EN POSICION: " + _pendingHeartIndex);
-
-            //_heartController._piecesPose.Remove(_pendingHeartIndex);
-
             _pendingHeartFragment = false;
             _pendingHeartIndex = -1;
             _heartController._heartAssets[_pieceObtained]._piece.gameObject.SetActive(true);
@@ -452,5 +427,25 @@ EXPRESIONES DISPONIBLES
     public void SendSystemMessage(string message)
     {
         StartCoroutine(ProcessMessage(message));
+    }
+
+    // Convierte int face a nombre de emoción
+    private string GetEmotionName(int face)
+    {
+        switch (face)
+        {
+            case 1: return "amazed";
+            case 2: return "happy";
+            case 3: return "thinking";
+            case 4: return "perfect";
+            case 5: return "afraid";
+            case 6: return "excited";
+            case 7: return "pissed";
+            case 8: return "concentrated";
+            case 9: return "ashamed";
+            case 10: return "mad";
+            case 11: return "marvelized";
+            default: return "curious";
+        }
     }
 }

@@ -1967,7 +1967,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11410b0ba0861984c87a0cf6c23e759e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _piecesPose: 
+  _piecesPose: 000000000000000000000000
   _heartAssets:
   - _piece: {fileID: 557148705}
     _pieceGot: 0
@@ -1975,6 +1975,7 @@ MonoBehaviour:
     _pieceGot: 0
   - _piece: {fileID: 1537003793}
     _pieceGot: 0
+  _heartGotAnimator: {fileID: 1020926679}
   _heartCompleted: 0
 --- !u!4 &263507448
 Transform:
@@ -5393,6 +5394,56 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &959518866
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 959518868}
+  - component: {fileID: 959518867}
+  m_Layer: 0
+  m_Name: MarinaBrain
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &959518867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959518866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5af6e6061ec9414dbd7a88ece753550, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  memories: []
+  currentEmotion: curious
+  trust: 0.3
+  friendship: 0.2
+  curiosity: 0.7
+  heartController: {fileID: 0}
+--- !u!4 &959518868
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959518866}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.16150656, y: -1.1460062, z: 345.258}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &961918857
 GameObject:
   m_ObjectHideFlags: 0
@@ -6142,7 +6193,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 624}
+  m_AnchoredPosition: {x: 0, y: -71}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1020926679
@@ -9010,19 +9061,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 480a137b03314a248bff68d65a42a164, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _tts: 0
   _scriptMermaid: {fileID: 835485228}
   _scriptSpriteMermaid: {fileID: 1432940977}
   _heartController: {fileID: 263507447}
   _azureTTS: {fileID: 98240918}
+  _elevenTTS: {fileID: 1614609444}
+  _brain: {fileID: 959518867}
+  _onHeartFragment: 0
   inputField: {fileID: 969373072}
   outputText: {fileID: 18302292}
   typingSpeed: 0.06
-  apiKey: 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
+  apiKey: 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
   positionState: 0
   faceState: 0
   _onStone: 0
   onPlace: 0
   _onGame: 0
+  _pieceObtained: 0
 --- !u!4 &1583432906
 Transform:
   m_ObjectHideFlags: 0
@@ -9110,6 +9166,150 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1591470247}
   m_CullTransparentMesh: 1
+--- !u!1 &1614609442
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1614609445}
+  - component: {fileID: 1614609444}
+  - component: {fileID: 1614609443}
+  m_Layer: 0
+  m_Name: ElevenLabsTTS
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1614609443
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1614609442}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &1614609444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1614609442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6ed598b9fa2320488c39f4d0542845c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  apiKey: sk_135f63703a5511e29dc5ef4d47826f55187d4f74333638c8
+  voiceId: yqTu7PvIL2rV3ubtjNlx
+  model: eleven_flash_v2
+--- !u!4 &1614609445
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1614609442}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.16150656, y: -1.1460062, z: 345.258}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1627018141
 GameObject:
   m_ObjectHideFlags: 0
@@ -17725,7 +17925,9 @@ SceneRoots:
   - {fileID: 410838732}
   - {fileID: 1583432906}
   - {fileID: 1432940978}
-  - {fileID: 98240919}
   - {fileID: 557819271}
   - {fileID: 1787146328}
   - {fileID: 263507448}
+  - {fileID: 959518868}
+  - {fileID: 98240919}
+  - {fileID: 1614609445}

@@ -6,9 +6,12 @@ using System.Text;
 [RequireComponent(typeof(AudioSource))]
 public class AzureTTSUnity : MonoBehaviour
 {
-    [Header("Azure Settings")]
+    //API AZURE = DGK46rWbZGjuwSSCpAj5vJIp9rl3qFqeKmi4T2Xi7jjYuHt8Mo60JQQJ99CCACYeBjFXJ3w3AAAYACOGSt9h
+    //RESGION AZURE = eastus
+    //VOICE AZURE = es-MX-CandelaNeural
+    [Header("Azure")]
     public string apiKey;
-    public string region = "eastus"; // cambia si tu region es otra
+    public string region = "eastus";
 
     [Header("Voice")]
     public string voiceName = "es-MX-DaliaNeural";
@@ -20,32 +23,37 @@ public class AzureTTSUnity : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
-    /// <summary>
-    /// Llama al TTS con emoción basada en faceState
-    /// </summary>
     public void Speak(string text, int faceEmotion)
     {
         StartCoroutine(SpeakCoroutine(text, faceEmotion));
     }
 
-    /// <summary>
-    /// Convierte faceState en estilo de voz de Azure
-    /// </summary>
-    private string GetAzureEmotion(int face)
+    string GetAzureEmotion(int face)
     {
         switch (face)
         {
-            case 2: return "cheerful";      // happy
-            case 6: return "excited";       // excited
-            case 9: return "sad";           // ashamed
-            case 5: return "fearful";       // afraid
-            case 7: return "angry";         // pissed
-            case 10: return "angry";        // mad
-            case 1: return "surprised";     // amazed
-            case 3: return "chat";          // thinking
-            case 11: return "cheerful";     // marvelized
-            default: return "general";      // idle, perfect, concentrated
+            case 2: return "cheerful";
+            case 6: return "excited";
+            case 9: return "sad";
+            case 5: return "fearful";
+            case 7: return "angry";
+            case 10: return "angry";
+            case 1: return "surprised";
+            case 3: return "chat";
+            case 11: return "cheerful";
+            default: return "general";
         }
+    }
+
+    // agrega pausas naturales
+    string HumanizeText(string text)
+    {
+        text = text.Replace("...", "<break time='400ms'/>");
+        text = text.Replace(".", ".<break time='300ms'/>");
+        text = text.Replace("!", "!<break time='350ms'/>");
+        text = text.Replace("?", "?<break time='350ms'/>");
+
+        return text;
     }
 
     IEnumerator SpeakCoroutine(string text, int faceEmotion)
@@ -54,25 +62,47 @@ public class AzureTTSUnity : MonoBehaviour
 
         string emotion = GetAzureEmotion(faceEmotion);
 
-        // SSML con estilo de emoción
+        text = HumanizeText(text);
+
+        // variaciones humanas
+        float rate = Random.Range(0.90f, 1.05f);
+        float pitch = Random.Range(-3f, 4f);
+        float styleDegree = Random.Range(0.6f, 1.3f);
+
         string ssml =
         "<speak version='1.0' xml:lang='es-MX' xmlns:mstts='https://www.w3.org/2001/mstts'>" +
+
         "<voice name='" + voiceName + "'>" +
-        "<mstts:express-as style='" + emotion + "'>" +
+
+        "<mstts:express-as style='" + emotion + "' styledegree='" + styleDegree + "'>" +
+
+        "<prosody rate='" + rate + "' pitch='" + pitch + "%'>" +
+
         text +
+
+        "</prosody>" +
+
         "</mstts:express-as>" +
-        "</voice></speak>";
+
+        "</voice>" +
+
+        "</speak>";
 
         byte[] body = Encoding.UTF8.GetBytes(ssml);
 
         UnityWebRequest request = new UnityWebRequest(url, "POST");
         request.uploadHandler = new UploadHandlerRaw(body);
-        request.downloadHandler = new DownloadHandlerAudioClip(url, AudioType.WAV);
+        request.downloadHandler = new DownloadHandlerAudioClip(url, AudioType.MPEG);
 
         request.SetRequestHeader("Ocp-Apim-Subscription-Key", apiKey);
         request.SetRequestHeader("Content-Type", "application/ssml+xml");
-        request.SetRequestHeader("X-Microsoft-OutputFormat", "riff-24khz-16bit-mono-pcm");
-        request.SetRequestHeader("User-Agent", "UnityTTS");
+
+        request.SetRequestHeader(
+            "X-Microsoft-OutputFormat",
+            "audio-48khz-192kbitrate-mono-mp3"
+        );
+
+        request.SetRequestHeader("User-Agent", "MarinaAI");
 
         yield return request.SendWebRequest();
 
