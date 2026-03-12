@@ -10,9 +10,10 @@ public class OpenRouterChat : MonoBehaviour
 {
     [SerializeField] private MermaidController _scriptMermaid;
     [SerializeField] private SpriteMermaidController _scriptSpriteMermaid;
-    //[SerializeField] private WindowsTTS _windowsTTS;
+    [SerializeField] private HeartController _heartController;
     [SerializeField] private AzureTTSUnity _azureTTS;
 
+    public bool _onHeartFragment;
     [Header("UI")]
     public TMP_InputField inputField;
     public TMP_Text outputText;
@@ -40,6 +41,11 @@ public class OpenRouterChat : MonoBehaviour
 
     public bool _onGame;
     private bool _pendingGame;
+
+    private bool _pendingHeartFragment;
+    private int _pendingHeartIndex = -1;
+
+    public int _pieceObtained;
 
     private string SYSTEM_PROMPT = @"
 Eres Marina, una joven sirena de estilo anime que vive dentro de un pequeño océano digital.
@@ -134,8 +140,6 @@ IMPORTANTE
 
 ACEPTACION DEL HUMANO
 
-Si el humano dice cualquiera de estas cosas significa que acepta jugar:
-
 SI
 CLARO
 OK
@@ -172,6 +176,29 @@ EXPRESIONES DISPONIBLES
             case 4: return "CONTEXTO DEL MUNDO: EL HUMANO ESTA EN LA SALA DE ARBOLES.";
             default: return "CONTEXTO DEL MUNDO: EL HUMANO ESTA EN UN LUGAR DESCONOCIDO.";
         }
+    }
+
+    bool CheckHeartFragment()
+    {
+        int index = onPlace * 4 + _onStone;
+
+        int fragmentIndex = System.Array.IndexOf(_heartController._piecesPose, index);
+
+        if (fragmentIndex != -1)
+        {
+            // SI YA SE RECOGIO, NO HACER NADA
+            if (_heartController._heartAssets[fragmentIndex]._pieceGot)
+                return false;
+
+            _pendingHeartFragment = true;
+            _pendingHeartIndex = index;
+
+            _pieceObtained = fragmentIndex;
+
+            return true;
+        }
+
+        return false;
     }
 
     void Update()
@@ -219,6 +246,14 @@ EXPRESIONES DISPONIBLES
             yield break;
         }
 
+        if (CheckHeartFragment())
+        {
+            yield return SendRequest("EL HUMANO ACABA DE ENCONTRAR UN FRAGMENTO DEL CORAZON");
+
+            isProcessing = false;
+            yield break;
+        }
+
         yield return SendRequest(message);
 
         isProcessing = false;
@@ -226,7 +261,17 @@ EXPRESIONES DISPONIBLES
 
     IEnumerator SendRequest(string message)
     {
-        outputText.text = "Marina está pensando...";
+        if (_onHeartFragment)
+        {
+            _onHeartFragment = false;
+            yield return SendRequest("EL HUMANO ACABA DE ENCONTRAR UN FRAGMENTO DE CORAZON");
+
+         
+
+            yield break;
+        }
+
+        outputText.text = "Marina esta pensando...";
         faceState = 3;
         _scriptSpriteMermaid.ChangeMermaidImage();
 
@@ -349,6 +394,19 @@ EXPRESIONES DISPONIBLES
 
         faceState = 0;
         _scriptSpriteMermaid.ChangeMermaidImage();
+
+        if (_pendingHeartFragment)
+        {
+            Debug.Log("FRAGMENTO ENCONTRADO EN POSICION: " + _pendingHeartIndex);
+
+            //_heartController._piecesPose.Remove(_pendingHeartIndex);
+
+            _pendingHeartFragment = false;
+            _pendingHeartIndex = -1;
+            _heartController._heartAssets[_pieceObtained]._piece.gameObject.SetActive(true);
+            _heartController._heartAssets[_pieceObtained]._pieceGot = true;
+            _heartController._heartGotAnimator.SetTrigger("HeartGot");
+        }
 
         if (_pendingGame)
         {
